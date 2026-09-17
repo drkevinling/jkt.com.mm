@@ -1,0 +1,93 @@
+@import 'tailwindcss';
+
+@theme {
+	--font-display: 'Poppins', ui-sans-serif, system-ui, sans-serif;
+	--font-sans: 'Inter Variable', 'Inter', ui-sans-serif, system-ui, sans-serif;
+
+	/* Owl night palette — deep indigo/navy */
+	--color-night-950: #0b1026;
+	--color-night-900: #121a3c;
+	--color-night-800: #1b2452;
+	--color-night-700: #27326e;
+	--color-night-600: #354186;
+	--color-night-500: #47539e;
+	--color-night-400: #6d77b6;
+	--color-night-300: #969ecf;
+	--color-night-200: #c2c7e3;
+	--color-night-100: #e3e6f4;
+	--color-night-50: #f2f4fa;
+
+	/* Amber gold — owl eyes & rewards */
+	--color-gold-700: #9a6420;
+	--color-gold-600: #c2822b;
+	--color-gold-500: #e8a33d;
+	--color-gold-400: #f0b554;
+	--color-gold-300: #f7c976;
+	--color-gold-200: #fcdfae;
+	--color-gold-100: #fdefd3;
+	--color-gold-50: #fef8ec;
+
+	/* Cream daylight background */
+	--color-cream-50: #faf7ef;
+	--color-cream-100: #f4eee0;
+	--color-cream-200: #eae1c9;
+	--color-cream-300: #dccfa9;
+
+	/* Ink text on cream */
+	--color-ink-900: #171a2c;
+	--color-ink-700: #2c3050;
+	--color-ink-500: #55597a;
+	--color-ink-400: #7d81a0;
+
+	--radius-card: 1.25rem;
+	--shadow-glow-gold: 0 0 40px rgb(232 163 61 / 0.35);
+	--shadow-card: 0 18px 40px -18px rgb(11 16 38 / 0.28);
+}
+
+/* Subtle starfield texture for night sections (pure CSS, no assets) */
+.starfield {
+	background-image:
+		radial-gradient(1.5px 1.5px at 12% 18%, rgb(255 255 255 / 0.65) 50%, transparent 51%),
+		radial-gradient(1px 1px at 28% 64%, rgb(255 255 255 / 0.4) 50%, transparent 51%),
+		radial-gradient(2px 2px at 44% 28%, rgb(252 223 174 / 0.7) 50%, transparent 51%),
+		radial-gradient(1px 1px at 61% 72%, rgb(255 255 255 / 0.35) 50%, transparent 51%),
+		radial-gradient(1.5px 1.5px at 74% 12%, rgb(255 255 255 / 0.55) 50%, transparent 51%),
+		radial-gradient(1px 1px at 83% 48%, rgb(255 255 255 / 0.4) 50%, transparent 51%),
+		radial-gradient(2px 2px at 92% 82%, rgb(252 223 174 / 0.5) 50%, transparent 51%),
+		radial-gradient(1px 1px at 8% 88%, rgb(255 255 255 / 0.35) 50%, transparent 51%);
+}
+
+/* Gentle float for the phone mockup */
+@keyframes owl-float {
+	0%,
+	100% {
+		transform: translateY(0);
+	}
+	50% {
+		transform: translateY(-12px);
+	}
+}
+.animate-owl-float {
+	animation: owl-float 6s ease-in-out infinite;
+}
+
+/* Slow twinkle for hero stars */
+@keyframes owl-twinkle {
+	0%,
+	100% {
+		opacity: 0.55;
+	}
+	50% {
+		opacity: 1;
+	}
+}
+.animate-owl-twinkle {
+	animation: owl-twinkle 4s ease-in-out infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+	.animate-owl-float,
+	.animate-owl-twinkle {
+		animation: none;
+	}
+}
