@@ -66,9 +66,11 @@ static/
   deploys `build/` to GitHub Pages.
 - `.github/workflows/ci.yml` gates every PR/push with lint/check/build and
   deploys to Pages on `main` (Node 22, `npm ci`).
-- Custom domain: `jkt.com.mm` (apex A records → GitHub Pages IPs
-  185.199.108–111.153) + `www` CNAME → Pages; HTTPS enforced via
-  GitHub-issued certificates. DNS hosted at MPT.
+- Public address: `https://drkevinling.github.io/jkt.com.mm/` — the CI build
+  sets `BASE_PATH=/<repo-name>` so assets resolve under the subpath; local
+  dev/build uses `/` (no BASE_PATH).
+- To move to a custom domain later: attach it in repo Pages settings, point
+  DNS at GitHub Pages, and update `site.url` in `src/lib/config/site.ts`.
 
 ## PR checklist
 

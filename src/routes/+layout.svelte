@@ -8,14 +8,15 @@
 	import Footer from '$lib/components/Footer.svelte';
 	import Header from '$lib/components/Header.svelte';
 	import { site } from '$lib/config/site';
+	import { assets } from '$app/paths';
 
 	let { children } = $props();
 </script>
 
 <svelte:head>
-	<link rel="icon" href="/favicon.svg" type="image/svg+xml" />
-	<link rel="icon" href="/favicon.ico" sizes="48x48" />
-	<link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+	<link rel="icon" href="{assets}/favicon.svg" type="image/svg+xml" />
+	<link rel="icon" href="{assets}/favicon.ico" sizes="48x48" />
+	<link rel="apple-touch-icon" href="{assets}/apple-touch-icon.png" />
 	<meta name="theme-color" content="#0b1026" />
 	<meta property="og:site_name" content={site.legalName} />
 	<meta property="og:type" content="website" />

@@ -9,8 +9,9 @@
  */
 export const site = {
 	/** Canonical production origin (no trailing slash). */
-	// TODO: confirm canonical host choice (apex vs www) once DNS is live
-	url: 'https://jkt.com.mm',
+	// TODO: if the site later moves to a custom domain (e.g. https://jkt.com.mm),
+	// update this value — canonical/OG tags, sitemap and robots all derive from it
+	url: 'https://drkevinling.github.io/jkt.com.mm',
 
 	/** Registered legal entity name — must match company registration exactly. */
 	// TODO: verify exact legal name as registered (punctuation, spacing)
