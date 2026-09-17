@@ -10,7 +10,7 @@
 	<div class="mx-auto w-full max-w-6xl px-5 py-16 sm:px-8">
 		<div class="grid gap-12 md:grid-cols-[1.4fr_1fr_1fr]">
 			<div>
-				<a href={resolve('/')} class="text-cream-50" aria-label="Owl Reward home">
+				<a href={resolve('/')} class="text-cream-50">
 					<OwlLogo size={40} />
 				</a>
 				<p class="mt-5 max-w-sm text-sm leading-relaxed text-night-300">

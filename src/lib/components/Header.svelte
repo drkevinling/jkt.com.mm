@@ -12,7 +12,7 @@
 
 <header class="sticky top-0 z-50 border-b border-cream-200/70 bg-cream-50/85 backdrop-blur-md">
 	<div class="mx-auto flex h-16 w-full max-w-6xl items-center gap-6 px-5 sm:px-8">
-		<a href={resolve('/')} class="shrink-0 text-night-900" aria-label="Owl Reward home">
+		<a href={resolve('/')} class="shrink-0 text-night-900">
 			<OwlLogo size={38} />
 		</a>
 

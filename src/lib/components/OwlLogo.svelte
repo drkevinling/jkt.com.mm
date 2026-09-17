@@ -42,7 +42,7 @@
 				Owl&nbsp;Reward
 			</span>
 			<span
-				class="font-sans font-medium text-ink-400 uppercase"
+				class="font-sans font-medium text-ink-500 uppercase"
 				style="font-size: {size * 0.17}px; letter-spacing: 0.22em"
 			>
 				by JKT

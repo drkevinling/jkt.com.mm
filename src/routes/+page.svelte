@@ -144,7 +144,7 @@
 		{#each steps as step, i (step.title)}
 			<article class="relative rounded-card border border-cream-200 bg-white/80 p-6 shadow-card">
 				<span
-					class="absolute top-5 right-5 font-display text-5xl font-bold text-cream-200 select-none"
+					class="absolute top-5 right-5 font-display text-5xl font-bold text-night-400 select-none"
 					aria-hidden="true"
 				>
 					0{i + 1}
@@ -239,11 +239,11 @@
 				{site.legalName} builds practical digital products for Myanmar's consumers and retailers. Owl
 				Reward is our loyalty platform connecting shoppers with the local businesses they love.
 			</p>
-			<p class="mt-3 text-sm text-ink-400">{addressLine}</p>
+			<p class="mt-3 text-sm text-ink-500">{addressLine}</p>
 		</div>
 		<a
 			href={resolve('/about')}
-			class="rounded-full border border-night-900/20 px-6 py-3 text-center font-display text-sm font-semibold text-night-900 transition hover:border-gold-500 hover:text-gold-600"
+			class="rounded-full border border-night-900/20 px-6 py-3 text-center font-display text-sm font-semibold text-night-900 transition hover:border-gold-500 hover:text-gold-700"
 		>
 			About JKT
 		</a>

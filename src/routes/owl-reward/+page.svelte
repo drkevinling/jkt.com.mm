@@ -115,7 +115,7 @@
 		{#each pillars as pillar (pillar.title)}
 			<article class="rounded-card border border-cream-200 bg-white/80 p-6 shadow-card">
 				<h3 class="font-display text-lg font-semibold text-night-900">{pillar.title}</h3>
-				<p class="mt-1 text-sm font-semibold text-gold-600">{pillar.lead}</p>
+				<p class="mt-1 text-sm font-semibold text-gold-700">{pillar.lead}</p>
 				<p class="mt-3 text-sm leading-relaxed text-ink-500">{pillar.body}</p>
 			</article>
 		{/each}

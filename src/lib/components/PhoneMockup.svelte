@@ -29,7 +29,7 @@
 					OW
 				</span>
 				<span class="flex flex-col leading-tight">
-					<span class="text-[0.6rem] font-medium text-ink-400">Good evening</span>
+					<span class="text-[0.6rem] font-medium text-ink-500">Good evening</span>
 					<span class="font-display text-sm font-semibold text-night-900">Aung Ko Ko</span>
 				</span>
 				<span
@@ -74,7 +74,7 @@
 			<div class="mx-4 mt-3 rounded-3xl border border-cream-200 bg-white/80 p-4">
 				<div class="flex items-center justify-between">
 					<span class="font-display text-xs font-semibold text-night-900">Moonleaf Coffee</span>
-					<span class="text-[0.6rem] font-semibold text-gold-600">3 more = free latte</span>
+					<span class="text-[0.6rem] font-semibold text-gold-700">3 more = free latte</span>
 				</div>
 				<div class="mt-3 grid grid-cols-8 gap-1.5">
 					{#each stamps as filled, i (i)}
@@ -105,10 +105,10 @@
 					>
 					<span class="flex flex-col leading-tight">
 						<span class="text-[0.68rem] font-semibold text-night-900">Weekend dine-in voucher</span>
-						<span class="text-[0.55rem] text-ink-400">500 pts · expires in 5 days</span>
+						<span class="text-[0.55rem] text-ink-500">500 pts · expires in 5 days</span>
 					</span>
 					<span
-						class="ml-auto rounded-full bg-gold-100 px-2.5 py-1 text-[0.55rem] font-bold text-gold-700"
+						class="ml-auto rounded-full bg-gold-100 px-2.5 py-1 text-[0.55rem] font-bold text-night-900"
 						>Redeem</span
 					>
 				</div>
@@ -121,7 +121,7 @@
 						<span class="text-[0.68rem] font-semibold text-night-900"
 							>Double points at Café Aroma</span
 						>
-						<span class="text-[0.55rem] text-ink-400">Campaign · this week only</span>
+						<span class="text-[0.55rem] text-ink-500">Campaign · this week only</span>
 					</span>
 					<span
 						class="ml-auto rounded-full bg-night-900 px-2.5 py-1 text-[0.55rem] font-bold text-gold-300"

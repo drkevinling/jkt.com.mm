@@ -9,7 +9,6 @@
 		href={site.stores.playStore}
 		target="_blank"
 		rel="external noopener noreferrer"
-		aria-label="Get Owl Reward on Google Play"
 		class="flex items-center gap-3 rounded-xl bg-night-950 px-5 py-3 text-cream-50 ring-1 ring-white/15 transition hover:bg-night-800 hover:shadow-glow-gold"
 	>
 		<svg width="26" height="26" viewBox="0 0 24 24" aria-hidden="true">
@@ -34,7 +33,6 @@
 		href={site.stores.appStore}
 		target="_blank"
 		rel="external noopener noreferrer"
-		aria-label="Download Owl Reward on the App Store"
 		class="flex items-center gap-3 rounded-xl bg-night-950 px-5 py-3 text-cream-50 ring-1 ring-white/15 transition hover:bg-night-800 hover:shadow-glow-gold"
 	>
 		<svg width="26" height="26" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">

@@ -35,7 +35,7 @@
 					<p
 						class="mb-3 font-display text-sm font-semibold tracking-[0.22em] uppercase {night
 							? 'text-gold-300'
-							: 'text-gold-600'}"
+							: 'text-gold-700'}"
 					>
 						{eyebrow}
 					</p>
