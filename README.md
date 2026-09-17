@@ -20,3 +20,5 @@ placeholders in [`src/lib/config/site.ts`](src/lib/config/site.ts), marked
 with `// TODO:` — swap them before submitting to Apple/Google review.
 
 See [AGENTS.md](AGENTS.md) for conventions, structure and the PR checklist.
+
+<!-- ci scratch -->
