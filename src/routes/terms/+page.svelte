@@ -170,12 +170,14 @@
 			{addressLine}<br />
 			<a
 				href="mailto:{site.email}"
-				class="text-gold-700 underline underline-offset-4"
+				class="text-gold-700 underline underline-offset-4 dark:text-gold-300"
 				rel="external">{site.email}</a
 			>
 			·
-			<a href="tel:{site.phone}" class="text-gold-700 underline underline-offset-4" rel="external"
-				>{site.phoneDisplay}</a
+			<a
+				href="tel:{site.phone}"
+				class="text-gold-700 underline underline-offset-4 dark:text-gold-300"
+				rel="external">{site.phoneDisplay}</a
 			>
 		</p>
 	</LegalSection>

@@ -6,7 +6,7 @@
 
 <div class="{className} relative w-[300px] select-none" aria-hidden="true">
 	<div
-		class="animate-owl-float rounded-[2.75rem] bg-night-950 p-2.5 shadow-[0_40px_80px_-30px_rgb(11_16_38/0.7)] ring-1 ring-white/10"
+		class="animate-owl-float rounded-[2.75rem] bg-night-950 p-2.5 shadow-[0_40px_80px_-30px_rgb(11_16_38/0.7)] ring-1 ring-white/10 dark:ring-white/25"
 	>
 		<div class="relative overflow-hidden rounded-[2.2rem] bg-cream-50">
 			<!-- status bar -->

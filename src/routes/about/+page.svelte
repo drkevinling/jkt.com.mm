@@ -45,17 +45,25 @@
 <!-- Mission / Vision -->
 <Section eyebrow="What drives us" title="Mission & vision">
 	<div class="grid gap-6 md:grid-cols-2">
-		<article class="rounded-card border border-cream-200 bg-white/80 p-8 shadow-card">
-			<h3 class="font-display text-xl font-semibold text-night-900">Our mission</h3>
-			<p class="mt-3 leading-relaxed text-ink-500">
+		<article
+			class="rounded-card border border-cream-200 bg-white/80 p-8 shadow-card dark:border-night-700/60 dark:bg-night-800/70"
+		>
+			<h3 class="font-display text-xl font-semibold text-night-900 dark:text-cream-50">
+				Our mission
+			</h3>
+			<p class="mt-3 leading-relaxed text-ink-500 dark:text-night-300">
 				Make loyalty simple, fair and rewarding for everyone — giving every shop, café and clinic in
 				Myanmar the tools of a modern rewards programme, and every shopper one trustworthy wallet
 				for all of them.
 			</p>
 		</article>
-		<article class="rounded-card border border-cream-200 bg-white/80 p-8 shadow-card">
-			<h3 class="font-display text-xl font-semibold text-night-900">Our vision</h3>
-			<p class="mt-3 leading-relaxed text-ink-500">
+		<article
+			class="rounded-card border border-cream-200 bg-white/80 p-8 shadow-card dark:border-night-700/60 dark:bg-night-800/70"
+		>
+			<h3 class="font-display text-xl font-semibold text-night-900 dark:text-cream-50">
+				Our vision
+			</h3>
+			<p class="mt-3 leading-relaxed text-ink-500 dark:text-night-300">
 				A Myanmar where value flows back to loyal customers as naturally as change flows back from a
 				cashier — visible, instant and earned. We want Owl Reward to be the most trusted name in
 				everyday rewards.

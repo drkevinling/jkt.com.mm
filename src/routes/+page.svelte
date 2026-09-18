@@ -142,15 +142,21 @@
 >
 	<div class="grid gap-6 md:grid-cols-3">
 		{#each steps as step, i (step.title)}
-			<article class="relative rounded-card border border-cream-200 bg-white/80 p-6 shadow-card">
+			<article
+				class="relative rounded-card border border-cream-200 bg-white/80 p-6 shadow-card dark:border-night-700/60 dark:bg-night-800/70"
+			>
 				<span
-					class="absolute top-5 right-5 font-display text-5xl font-bold text-night-400 select-none"
+					class="absolute top-5 right-5 font-display text-5xl font-bold text-night-400 select-none dark:text-night-700"
 					aria-hidden="true"
 				>
 					0{i + 1}
 				</span>
-				<h3 class="font-display text-lg font-semibold text-night-900">{step.title}</h3>
-				<p class="mt-2 text-sm leading-relaxed text-ink-500">{step.description}</p>
+				<h3 class="font-display text-lg font-semibold text-night-900 dark:text-cream-50">
+					{step.title}
+				</h3>
+				<p class="mt-2 text-sm leading-relaxed text-ink-500 dark:text-night-300">
+					{step.description}
+				</p>
 			</article>
 		{/each}
 	</div>
@@ -226,24 +232,26 @@
 </Section>
 
 <!-- About teaser -->
-<section class="bg-cream-50">
+<section class="bg-cream-50 dark:bg-night-950">
 	<div
 		class="mx-auto grid w-full max-w-6xl items-center gap-10 px-5 py-20 sm:px-8 md:grid-cols-[auto_1fr_auto]"
 	>
-		<OwlLogo size={72} wordmark={false} class="text-night-900" />
+		<OwlLogo size={72} wordmark={false} class="text-night-900 dark:text-cream-50" />
 		<div>
-			<h2 class="font-display text-2xl font-bold tracking-tight text-night-900 sm:text-3xl">
+			<h2
+				class="font-display text-2xl font-bold tracking-tight text-night-900 sm:text-3xl dark:text-cream-50"
+			>
 				Built in Yangon by {site.legalName}
 			</h2>
-			<p class="mt-3 max-w-2xl leading-relaxed text-ink-500">
+			<p class="mt-3 max-w-2xl leading-relaxed text-ink-500 dark:text-night-300">
 				{site.legalName} builds practical digital products for Myanmar's consumers and retailers. Owl
 				Reward is our loyalty platform connecting shoppers with the local businesses they love.
 			</p>
-			<p class="mt-3 text-sm text-ink-500">{addressLine}</p>
+			<p class="mt-3 text-sm text-ink-500 dark:text-night-300">{addressLine}</p>
 		</div>
 		<a
 			href={resolve('/about')}
-			class="rounded-full border border-night-900/20 px-6 py-3 text-center font-display text-sm font-semibold text-night-900 transition hover:border-gold-500 hover:text-gold-700"
+			class="rounded-full border border-night-900/20 px-6 py-3 text-center font-display text-sm font-semibold text-night-900 transition hover:border-gold-500 hover:text-gold-700 dark:border-cream-50/20 dark:text-cream-50 dark:hover:border-gold-400 dark:hover:text-gold-300"
 		>
 			About JKT
 		</a>

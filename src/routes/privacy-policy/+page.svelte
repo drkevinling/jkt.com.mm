@@ -45,12 +45,14 @@
 			at
 			<a
 				href="mailto:{site.email}"
-				class="text-gold-700 underline underline-offset-4"
+				class="text-gold-700 underline underline-offset-4 dark:text-gold-300"
 				rel="external">{site.email}</a
 			>
 			or by phone at
-			<a href="tel:{site.phone}" class="text-gold-700 underline underline-offset-4" rel="external"
-				>{site.phoneDisplay}</a
+			<a
+				href="tel:{site.phone}"
+				class="text-gold-700 underline underline-offset-4 dark:text-gold-300"
+				rel="external">{site.phoneDisplay}</a
 			>.
 		</p>
 	</LegalSection>
@@ -177,7 +179,7 @@
 				<strong>Complain:</strong> you can raise a concern with us at
 				<a
 					href="mailto:{site.email}"
-					class="text-gold-700 underline underline-offset-4"
+					class="text-gold-700 underline underline-offset-4 dark:text-gold-300"
 					rel="external">{site.email}</a
 				>.
 			</li>
@@ -214,12 +216,14 @@
 			Questions about this policy or your information:
 			<a
 				href="mailto:{site.email}"
-				class="text-gold-700 underline underline-offset-4"
+				class="text-gold-700 underline underline-offset-4 dark:text-gold-300"
 				rel="external">{site.email}</a
 			>
 			·
-			<a href="tel:{site.phone}" class="text-gold-700 underline underline-offset-4" rel="external"
-				>{site.phoneDisplay}</a
+			<a
+				href="tel:{site.phone}"
+				class="text-gold-700 underline underline-offset-4 dark:text-gold-300"
+				rel="external">{site.phoneDisplay}</a
 			><br />
 			{site.legalName}, {addressLine}
 		</p>

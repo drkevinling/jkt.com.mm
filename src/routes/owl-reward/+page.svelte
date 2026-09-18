@@ -113,10 +113,14 @@
 >
 	<div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
 		{#each pillars as pillar (pillar.title)}
-			<article class="rounded-card border border-cream-200 bg-white/80 p-6 shadow-card">
-				<h3 class="font-display text-lg font-semibold text-night-900">{pillar.title}</h3>
-				<p class="mt-1 text-sm font-semibold text-gold-700">{pillar.lead}</p>
-				<p class="mt-3 text-sm leading-relaxed text-ink-500">{pillar.body}</p>
+			<article
+				class="rounded-card border border-cream-200 bg-white/80 p-6 shadow-card dark:border-night-700/60 dark:bg-night-800/70"
+			>
+				<h3 class="font-display text-lg font-semibold text-night-900 dark:text-cream-50">
+					{pillar.title}
+				</h3>
+				<p class="mt-1 text-sm font-semibold text-gold-700 dark:text-gold-300">{pillar.lead}</p>
+				<p class="mt-3 text-sm leading-relaxed text-ink-500 dark:text-night-300">{pillar.body}</p>
 			</article>
 		{/each}
 	</div>

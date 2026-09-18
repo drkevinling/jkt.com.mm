@@ -1,5 +1,7 @@
 @import 'tailwindcss';
 
+@custom-variant dark (&:where(.dark, .dark *));
+
 @theme {
 	--font-display: 'Poppins', ui-sans-serif, system-ui, sans-serif;
 	--font-sans: 'Inter Variable', 'Inter', ui-sans-serif, system-ui, sans-serif;
@@ -89,5 +91,20 @@
 	.animate-owl-float,
 	.animate-owl-twinkle {
 		animation: none;
+	}
+}
+
+@layer base {
+	:root {
+		color-scheme: light;
+	}
+
+	html {
+		background-color: var(--color-cream-50);
+	}
+
+	html.dark {
+		color-scheme: dark;
+		background-color: var(--color-night-950);
 	}
 }

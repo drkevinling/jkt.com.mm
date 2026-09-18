@@ -47,15 +47,15 @@
 </section>
 
 <!-- Contact cards -->
-<section class="bg-cream-50">
+<section class="bg-cream-50 dark:bg-night-950">
 	<div class="mx-auto grid w-full max-w-6xl gap-6 px-5 py-20 sm:px-8 md:grid-cols-3">
 		<a
 			href="mailto:{site.email}"
 			rel="external"
-			class="group rounded-card border border-cream-200 bg-white/80 p-8 shadow-card transition-transform hover:-translate-y-1"
+			class="group rounded-card border border-cream-200 bg-white/80 p-8 shadow-card transition-transform hover:-translate-y-1 dark:border-night-700/60 dark:bg-night-800/70"
 		>
 			<span
-				class="mb-5 inline-flex size-12 items-center justify-center rounded-2xl bg-gold-100 text-gold-600"
+				class="mb-5 inline-flex size-12 items-center justify-center rounded-2xl bg-gold-100 text-gold-600 dark:bg-gold-500/15 dark:text-gold-400"
 			>
 				<svg
 					width="22"
@@ -70,9 +70,13 @@
 					<path d="m4 7.5 8 6 8-6" stroke-linecap="round" stroke-linejoin="round" />
 				</svg>
 			</span>
-			<h2 class="font-display text-lg font-semibold text-night-900">Email us</h2>
-			<p class="mt-2 text-sm text-ink-500">General questions, support and partnerships.</p>
-			<p class="mt-3 font-semibold break-all text-gold-700 group-hover:text-gold-600">
+			<h2 class="font-display text-lg font-semibold text-night-900 dark:text-cream-50">Email us</h2>
+			<p class="mt-2 text-sm text-ink-500 dark:text-night-300">
+				General questions, support and partnerships.
+			</p>
+			<p
+				class="mt-3 font-semibold break-all text-gold-700 group-hover:text-gold-600 dark:text-gold-300 dark:group-hover:text-gold-200"
+			>
 				{site.email}
 			</p>
 		</a>
@@ -80,10 +84,10 @@
 		<a
 			href="tel:{site.phone}"
 			rel="external"
-			class="group rounded-card border border-cream-200 bg-white/80 p-8 shadow-card transition-transform hover:-translate-y-1"
+			class="group rounded-card border border-cream-200 bg-white/80 p-8 shadow-card transition-transform hover:-translate-y-1 dark:border-night-700/60 dark:bg-night-800/70"
 		>
 			<span
-				class="mb-5 inline-flex size-12 items-center justify-center rounded-2xl bg-gold-100 text-gold-600"
+				class="mb-5 inline-flex size-12 items-center justify-center rounded-2xl bg-gold-100 text-gold-600 dark:bg-gold-500/15 dark:text-gold-400"
 			>
 				<svg
 					width="22"
@@ -101,14 +105,24 @@
 					/>
 				</svg>
 			</span>
-			<h2 class="font-display text-lg font-semibold text-night-900">Call the hotline</h2>
-			<p class="mt-2 text-sm text-ink-500">Member support, Monday to Saturday, 9:00–18:00 (MMT).</p>
-			<p class="mt-3 font-semibold text-gold-700 group-hover:text-gold-600">{site.phoneDisplay}</p>
+			<h2 class="font-display text-lg font-semibold text-night-900 dark:text-cream-50">
+				Call the hotline
+			</h2>
+			<p class="mt-2 text-sm text-ink-500 dark:text-night-300">
+				Member support, Monday to Saturday, 9:00–18:00 (MMT).
+			</p>
+			<p
+				class="mt-3 font-semibold text-gold-700 group-hover:text-gold-600 dark:text-gold-300 dark:group-hover:text-gold-200"
+			>
+				{site.phoneDisplay}
+			</p>
 		</a>
 
-		<div class="rounded-card border border-cream-200 bg-white/80 p-8 shadow-card">
+		<div
+			class="rounded-card border border-cream-200 bg-white/80 p-8 shadow-card dark:border-night-700/60 dark:bg-night-800/70"
+		>
 			<span
-				class="mb-5 inline-flex size-12 items-center justify-center rounded-2xl bg-gold-100 text-gold-600"
+				class="mb-5 inline-flex size-12 items-center justify-center rounded-2xl bg-gold-100 text-gold-600 dark:bg-gold-500/15 dark:text-gold-400"
 			>
 				<svg
 					width="22"
@@ -127,18 +141,20 @@
 					<circle cx="12" cy="10" r="2.5" />
 				</svg>
 			</span>
-			<h2 class="font-display text-lg font-semibold text-night-900">Visit us</h2>
-			<p class="mt-2 text-sm text-ink-500">Head office:</p>
-			<p class="mt-1 text-sm leading-relaxed text-ink-700">{addressLine}</p>
+			<h2 class="font-display text-lg font-semibold text-night-900 dark:text-cream-50">Visit us</h2>
+			<p class="mt-2 text-sm text-ink-500 dark:text-night-300">Head office:</p>
+			<p class="mt-1 text-sm leading-relaxed text-ink-700 dark:text-night-200">{addressLine}</p>
 		</div>
 	</div>
 </section>
 
 <!-- Socials -->
-<section class="bg-cream-50 pb-20">
+<section class="bg-cream-50 pb-20 dark:bg-night-950">
 	<div class="mx-auto max-w-6xl px-5 text-center sm:px-8">
-		<h2 class="font-display text-2xl font-bold text-night-900">Follow the owl</h2>
-		<p class="mt-2 text-ink-500">
+		<h2 class="font-display text-2xl font-bold text-night-900 dark:text-cream-50">
+			Follow the owl
+		</h2>
+		<p class="mt-2 text-ink-500 dark:text-night-300">
 			Campaign announcements and new partners land on our socials first.
 		</p>
 		<div class="mt-8 flex flex-wrap justify-center gap-4">
@@ -147,7 +163,7 @@
 					href={social.href}
 					target="_blank"
 					rel="external noopener noreferrer"
-					class="rounded-full border border-night-900/15 bg-white/70 px-6 py-3 font-display text-sm font-semibold text-night-900 transition hover:border-gold-500 hover:text-gold-600"
+					class="rounded-full border border-night-900/15 bg-white/70 px-6 py-3 font-display text-sm font-semibold text-night-900 transition hover:border-gold-500 hover:text-gold-600 dark:border-cream-50/15 dark:bg-night-800/70 dark:text-cream-50 dark:hover:border-gold-400 dark:hover:text-gold-300"
 				>
 					{social.label}
 				</a>
