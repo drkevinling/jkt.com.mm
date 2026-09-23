@@ -84,23 +84,19 @@
 	<title>{site.brand} ERP — Accounting, Inventory, POS &amp; HR Web Suite | {site.legalName}</title>
 	<meta
 		name="description"
-		content="Owlvyra ERP by JKT Co.,Ltd: web apps for accounting, inventory, sales & POS, HR & payroll and loyalty. Start with one module and grow to the full back office without re-entering data."
+		content="Owlvyra ERP by J K T Company Limited: web apps for accounting, inventory, sales & POS, HR & payroll and loyalty. Start with one module and grow to the full back office without re-entering data."
 	/>
 	<link rel="canonical" href="{site.url}/erp" />
 	<meta property="og:title" content="{site.brand} ERP — the back office that grows with you" />
 	<meta
 		property="og:description"
-		content="Accounting, inventory, sales & POS, HR & payroll and loyalty in one web suite from JKT Co.,Ltd, Yangon."
+		content="Accounting, inventory, sales & POS, HR & payroll and loyalty in one web suite from J K T Company Limited, Yangon."
 	/>
 	<meta property="og:url" content="{site.url}/erp" />
 </svelte:head>
 
 <!-- Hero -->
 <section class="starfield relative overflow-hidden bg-night-900 text-cream-50">
-	<div
-		class="pointer-events-none absolute -top-24 -right-24 size-96 rounded-full bg-gold-500/15 blur-3xl"
-		aria-hidden="true"
-	></div>
 	<div
 		class="pointer-events-none absolute -bottom-32 -left-32 size-96 rounded-full bg-night-600/30 blur-3xl"
 		aria-hidden="true"
@@ -142,13 +138,13 @@
 				Access is provisioned by the {site.legalName} team — email
 				<a
 					href="mailto:{site.email}"
-					class="underline decoration-gold-500/60 underline-offset-4 transition-colors hover:text-gold-300"
+					class="inline-flex items-center rounded-full bg-night-800/80 px-3 py-1 font-medium text-gold-300 ring-1 ring-night-600/60 transition-colors hover:bg-night-800 hover:text-gold-200 hover:ring-gold-500/50"
 					rel="external">{site.email}</a
 				>.
 			</p>
 		</div>
 		<div class="hidden justify-end lg:flex">
-			<OwlMascot class="w-64 xl:w-72" />
+			<OwlMascot class="animate-owl-float w-64 xl:w-72" />
 		</div>
 	</div>
 </section>
@@ -231,6 +227,9 @@
 		aria-hidden="true"
 	></div>
 	<div class="relative mx-auto max-w-3xl px-5 py-24 text-center sm:px-8">
+		<p class="mb-4 font-display text-sm font-semibold tracking-[0.22em] text-gold-300 uppercase">
+			See what others miss
+		</p>
 		<h2 class="font-display text-3xl font-bold tracking-tight text-balance sm:text-4xl">
 			Your books, stock and staff — <span class="text-gold-400">under one owl.</span>
 		</h2>

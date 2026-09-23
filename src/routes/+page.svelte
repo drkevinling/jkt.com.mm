@@ -1,6 +1,7 @@
 <script lang="ts">
 	import { resolve } from '$app/paths';
 	import FeatureCard from '$lib/components/FeatureCard.svelte';
+	import JktLogo from '$lib/components/JktLogo.svelte';
 	import OwlMascot from '$lib/components/OwlMascot.svelte';
 	import Section from '$lib/components/Section.svelte';
 	import StoreBadges from '$lib/components/StoreBadges.svelte';
@@ -16,6 +17,24 @@
 		'Finance',
 		'Fixed assets',
 		'Expense'
+	];
+
+	const motto = [
+		{
+			title: 'Silent',
+			description:
+				'Quiet precision. The owl works without a sound — and so does Owlvyra. Journals post, stock moves and books balance quietly in the background, with no double entry and no noise.'
+		},
+		{
+			title: 'Swift',
+			description:
+				'Excellent performance. Like an owl striking in one motion, a counter sale finishes in one tap and reports render while you watch. Fast where it counts.'
+		},
+		{
+			title: 'Smart',
+			description:
+				'Intelligent workflow. Screens unfold at your pace, modules post to each other, and the software never asks twice for what it already knows.'
+		}
 	];
 
 	const growSteps = [
@@ -41,7 +60,7 @@
 	<title>{site.brand} — Business Software &amp; Loyalty Apps by {site.legalName}</title>
 	<meta
 		name="description"
-		content="Owlvyra by JKT Co.,Ltd builds the Owlvyra ERP suite — accounting, inventory, POS and HR & payroll web apps — and the Owl Reward loyalty app for businesses in Myanmar."
+		content="Owlvyra by J K T Company Limited builds the Owlvyra ERP suite — accounting, inventory, POS and HR & payroll web apps — and the Owl Reward loyalty app for businesses in Myanmar."
 	/>
 	<link rel="canonical" href={site.url} />
 	<meta
@@ -58,10 +77,6 @@
 <!-- Hero -->
 <section class="starfield relative overflow-hidden bg-night-900 text-cream-50">
 	<div
-		class="pointer-events-none absolute -top-24 -right-24 size-96 rounded-full bg-gold-500/15 blur-3xl"
-		aria-hidden="true"
-	></div>
-	<div
 		class="pointer-events-none absolute -bottom-32 -left-32 size-96 rounded-full bg-night-600/30 blur-3xl"
 		aria-hidden="true"
 	></div>
@@ -73,7 +88,7 @@
 			<p
 				class="animate-owl-twinkle inline-flex items-center gap-2 rounded-full border border-gold-500/40 bg-gold-500/10 px-4 py-1.5 text-xs font-semibold tracking-[0.16em] text-gold-300 uppercase"
 			>
-				{site.brand} by JKT
+				See what others miss
 			</p>
 			<h1
 				class="mt-6 font-display text-4xl leading-[1.08] font-bold tracking-tight text-balance sm:text-5xl lg:text-6xl"
@@ -102,7 +117,7 @@
 		</div>
 
 		<div class="flex items-end justify-center sm:justify-end">
-			<OwlMascot class="w-56 sm:w-72 lg:w-80" />
+			<OwlMascot class="animate-owl-float w-56 sm:w-72 lg:w-80" />
 		</div>
 	</div>
 
@@ -181,8 +196,8 @@
 			</h3>
 			<p class="mt-3 leading-relaxed text-ink-500 dark:text-night-300">
 				The loyalty app for Myanmar shoppers: points, digital stamp cards, campaigns and vouchers
-				from partner shops — one wallet instead of a drawer full of punch cards. On Google Play and
-				the App Store.
+				from partner shops — one wallet instead of a drawer full of punch cards.
+				{#if site.stores.live}On{:else}Coming soon to{/if} Google Play and the App Store.
 			</p>
 			<ul class="mt-5 flex flex-wrap gap-2">
 				{#each ['Points wallet', 'Stamp cards', 'Campaigns', 'Vouchers', 'Member QR'] as chip (chip)}
@@ -193,7 +208,7 @@
 					</li>
 				{/each}
 			</ul>
-			<div class="mt-7 flex flex-wrap items-center gap-4 pt-1">
+			<div class="mt-7 flex flex-wrap items-center gap-x-6 gap-y-5 pt-1">
 				<a
 					href={resolve('/owl-reward')}
 					class="rounded-full bg-night-900 px-6 py-2.5 font-display text-sm font-semibold text-cream-50 transition hover:bg-night-700 dark:bg-gold-500 dark:text-night-950 dark:hover:bg-gold-400"
@@ -204,6 +219,71 @@
 			</div>
 		</article>
 	</div>
+</Section>
+
+<!-- Motto -->
+<Section
+	eyebrow="Our motto"
+	title="Silent. Swift. Smart."
+	description="We take our inspiration from the owl — and build the same qualities into every screen and every ledger line."
+>
+	<div class="grid gap-6 md:grid-cols-3">
+		{#each motto as trait (trait.title)}
+			<FeatureCard title={trait.title} description={trait.description}>
+				{#snippet icon()}
+					{#if trait.title === 'Silent'}
+						<svg
+							width="24"
+							height="24"
+							viewBox="0 0 24 24"
+							fill="none"
+							stroke="currentColor"
+							stroke-width="1.8"
+							stroke-linecap="round"
+							stroke-linejoin="round"
+							aria-hidden="true"
+						>
+							<path d="M20.24 12.24a6 6 0 0 0-8.49-8.49L5 10.5V19h8.5z" />
+							<path d="M16 8 2 22" />
+							<path d="M17.5 15H9" />
+						</svg>
+					{:else if trait.title === 'Swift'}
+						<svg
+							width="24"
+							height="24"
+							viewBox="0 0 24 24"
+							fill="none"
+							stroke="currentColor"
+							stroke-width="1.8"
+							stroke-linecap="round"
+							stroke-linejoin="round"
+							aria-hidden="true"
+						>
+							<path d="M13 2 3 14h9l-1 8 10-12h-9l1-8z" />
+						</svg>
+					{:else}
+						<svg
+							width="24"
+							height="24"
+							viewBox="0 0 24 24"
+							fill="none"
+							stroke="currentColor"
+							stroke-width="1.8"
+							stroke-linecap="round"
+							stroke-linejoin="round"
+							aria-hidden="true"
+						>
+							<path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7-10-7-10-7Z" />
+							<circle cx="12" cy="12" r="3" />
+						</svg>
+					{/if}
+				{/snippet}
+			</FeatureCard>
+		{/each}
+	</div>
+	<p class="mt-10 text-center font-display text-lg font-semibold text-gold-700 dark:text-gold-300">
+		See what others miss.
+	</p>
 </Section>
 
 <!-- Grows with you -->
@@ -229,13 +309,16 @@
 	<div
 		class="mx-auto grid w-full max-w-6xl items-center gap-10 px-5 py-20 sm:px-8 md:grid-cols-[auto_1fr_auto]"
 	>
-		<OwlLogo size={72} wordmark={false} class="text-night-900 dark:text-cream-50" />
+		<OwlLogo size={96} wordmark={false} class="text-night-900 dark:text-cream-50" />
 		<div>
-			<h2
-				class="font-display text-2xl font-bold tracking-tight text-night-900 sm:text-3xl dark:text-cream-50"
-			>
-				Built in Yangon by {site.legalName}
-			</h2>
+			<div class="flex flex-wrap items-center gap-4">
+				<h2
+					class="font-display text-2xl font-bold tracking-tight text-night-900 sm:text-3xl dark:text-cream-50"
+				>
+					Built by {site.legalName}
+				</h2>
+				<JktLogo height={44} class="ml-1" />
+			</div>
 			<p class="mt-3 max-w-2xl leading-relaxed text-ink-500 dark:text-night-300">
 				{site.legalName} is a technology company building the {site.brand} family — practical software
 				for Myanmar's businesses and the people they serve. Every product is designed, developed and supported
@@ -247,7 +330,7 @@
 			href={resolve('/about')}
 			class="rounded-full border border-night-900/20 px-6 py-3 text-center font-display text-sm font-semibold text-night-900 transition hover:border-gold-500 hover:text-gold-700 dark:border-cream-50/20 dark:text-cream-50 dark:hover:border-gold-400 dark:hover:text-gold-300"
 		>
-			About JKT
+			About J K T
 		</a>
 	</div>
 </section>
@@ -259,6 +342,9 @@
 		aria-hidden="true"
 	></div>
 	<div class="relative mx-auto max-w-3xl px-5 py-24 text-center sm:px-8">
+		<p class="mb-4 font-display text-sm font-semibold tracking-[0.22em] text-gold-300 uppercase">
+			See what others miss
+		</p>
 		<h2 class="font-display text-3xl font-bold tracking-tight text-balance sm:text-4xl">
 			From the first kyat <span class="text-gold-400">to the full ledger.</span>
 		</h2>

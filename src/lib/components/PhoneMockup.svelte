@@ -131,12 +131,101 @@
 			</div>
 
 			<!-- bottom nav -->
-			<div class="flex items-center justify-around border-t border-cream-200 px-6 py-3">
-				<span class="size-5 rounded-full bg-night-900"></span>
-				<span class="size-5 rounded-full border-2 border-ink-400/50"></span>
-				<span class="size-5 rotate-45 rounded-[0.4rem] border-2 border-ink-400/50"></span>
-				<span class="size-5 rounded-[0.5rem] border-2 border-ink-400/50"></span>
-			</div>
+			<nav class="flex items-start justify-around border-t border-cream-200 px-4 pt-2.5 pb-2">
+				<div class="flex flex-col items-center gap-0.5">
+					<svg
+						class="text-gold-600"
+						width="16"
+						height="16"
+						viewBox="0 0 24 24"
+						fill="none"
+						stroke="currentColor"
+						stroke-width="2"
+						stroke-linecap="round"
+						stroke-linejoin="round"
+					>
+						<path d="M3 10 12 3l9 7" />
+						<path d="M5 9.5V21h14V9.5" />
+						<path d="M10 21v-6h4v6" />
+					</svg>
+					<span class="text-[0.5rem] font-semibold text-gold-600">Home</span>
+				</div>
+				<div class="flex flex-col items-center gap-0.5">
+					<svg
+						class="text-ink-400"
+						width="16"
+						height="16"
+						viewBox="0 0 24 24"
+						fill="none"
+						stroke="currentColor"
+						stroke-width="2"
+						stroke-linecap="round"
+						stroke-linejoin="round"
+					>
+						<rect x="3.5" y="3.5" width="7" height="7" rx="1.5" />
+						<rect x="13.5" y="3.5" width="7" height="7" rx="1.5" />
+						<rect x="3.5" y="13.5" width="7" height="7" rx="1.5" />
+						<rect x="13.5" y="13.5" width="7" height="7" rx="1.5" />
+					</svg>
+					<span class="text-[0.5rem] font-medium text-ink-400">Cards</span>
+				</div>
+				<div class="flex flex-col items-center gap-0.5">
+					<svg
+						class="text-ink-400"
+						width="16"
+						height="16"
+						viewBox="0 0 24 24"
+						fill="none"
+						stroke="currentColor"
+						stroke-width="2"
+						stroke-linecap="round"
+						stroke-linejoin="round"
+					>
+						<path d="M3 7V5a2 2 0 0 1 2-2h2" />
+						<path d="M17 3h2a2 2 0 0 1 2 2v2" />
+						<path d="M21 17v2a2 2 0 0 1-2 2h-2" />
+						<path d="M7 21H5a2 2 0 0 1-2-2v-2" />
+						<path d="M7 12h10" />
+					</svg>
+					<span class="text-[0.5rem] font-medium text-ink-400">Scan</span>
+				</div>
+				<div class="flex flex-col items-center gap-0.5">
+					<svg
+						class="text-ink-400"
+						width="16"
+						height="16"
+						viewBox="0 0 24 24"
+						fill="none"
+						stroke="currentColor"
+						stroke-width="2"
+						stroke-linecap="round"
+						stroke-linejoin="round"
+					>
+						<rect x="3" y="8" width="18" height="4" rx="1" />
+						<path d="M12 8v13" />
+						<path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-7" />
+						<path d="M7.5 8a2.5 2.5 0 0 1 0-5C11 3 12 8 12 8s1-5 4.5-5a2.5 2.5 0 0 1 0 5" />
+					</svg>
+					<span class="text-[0.5rem] font-medium text-ink-400">Rewards</span>
+				</div>
+				<div class="flex flex-col items-center gap-0.5">
+					<svg
+						class="text-ink-400"
+						width="16"
+						height="16"
+						viewBox="0 0 24 24"
+						fill="none"
+						stroke="currentColor"
+						stroke-width="2"
+						stroke-linecap="round"
+						stroke-linejoin="round"
+					>
+						<circle cx="12" cy="8" r="4" />
+						<path d="M4 21c0-4 4-6 8-6s8 2 8 6" />
+					</svg>
+					<span class="text-[0.5rem] font-medium text-ink-400">Profile</span>
+				</div>
+			</nav>
 			<div class="mx-auto mt-1 mb-2.5 h-1 w-24 rounded-full bg-night-950/20"></div>
 		</div>
 	</div>

@@ -20,14 +20,15 @@
 	/>
 	{#if wordmark}
 		<span class="flex flex-col leading-none">
-			<span class="font-display font-bold tracking-tight" style="font-size: {size * 0.34}px">
+			<span class="font-display font-bold tracking-tight" style="font-size: {size * 0.36}px">
 				{site.brand}
 			</span>
 			<span
-				class="font-sans font-medium text-ink-500 uppercase dark:text-night-300"
-				style="font-size: {size * 0.17}px; letter-spacing: 0.22em"
+				class="font-sans font-semibold text-ink-500 uppercase dark:text-night-300"
+				style="font-size: {Math.max(8, size * 0.2)}px; letter-spacing: 0.28em; margin-top: {size *
+					0.08}px"
 			>
-				by JKT
+				by J K T
 			</span>
 		</span>
 	{/if}

@@ -2,15 +2,15 @@
 	import LegalSection from '$lib/components/LegalSection.svelte';
 	import { addressLine, site } from '$lib/config/site';
 
-	// TODO: set the real effective date before store submission
-	const effectiveDate = 'TODO — effective date';
+	// Last-updated date shown on the terms; bump it whenever the terms change
+	const lastUpdated = '16 September 2026';
 </script>
 
 <svelte:head>
 	<title>Terms &amp; Conditions — {site.legalName} | {site.brand} &amp; {site.appName}</title>
 	<meta
 		name="description"
-		content="Terms and conditions governing use of the jkt.com.mm website, the Owlvyra ERP web applications and the Owl Reward mobile application provided by JKT Co.,Ltd."
+		content="Terms and conditions governing use of the jkt.com.mm website, the Owlvyra ERP web applications and the Owl Reward mobile application provided by J K T Company Limited."
 	/>
 	<link rel="canonical" href="{site.url}/terms" />
 	<meta
@@ -19,7 +19,7 @@
 	/>
 	<meta
 		property="og:description"
-		content="Terms governing use of the jkt.com.mm website, the Owlvyra ERP web apps and the Owl Reward app by JKT Co.,Ltd."
+		content="Terms governing use of the jkt.com.mm website, the Owlvyra ERP web apps and the Owl Reward app by J K T Company Limited."
 	/>
 	<meta property="og:url" content="{site.url}/terms" />
 </svelte:head>
@@ -41,7 +41,7 @@
 			provided when their account is provisioned; these terms continue to apply to their use of the
 			Services.
 		</p>
-		<p class="mt-3 text-sm text-night-300">Effective date: {effectiveDate}</p>
+		<p class="mt-3 text-sm text-night-300">Last updated: {lastUpdated}</p>
 	</div>
 </section>
 
@@ -56,15 +56,15 @@
 
 	<LegalSection id="eligibility" title="2. Eligibility">
 		<p>
-			<!-- TODO: confirm minimum age for membership (13/16/18) before submission -->
-			You may use Owl Reward if you are old enough to form a binding contract under Myanmar law and are
-			not barred from using the Services under applicable sanctions or other laws.
+			You may use the Services if you are 13 years or older (or 18 where required by local law) and
+			are not barred from using the Services under applicable sanctions or other laws. If you are
+			under 18, a parent or guardian should review these terms with you.
 		</p>
 	</LegalSection>
 
 	<LegalSection id="accounts" title="3. Your account">
 		<ul class="list-disc space-y-2 pl-6">
-			<li>You register with your mobile phone number and verify it with a one-time password.</li>
+			<li>You register with your email address and verify it to create your account.</li>
 			<li>
 				Keep your device and account secure. Activity through your account is presumed to be yours.
 			</li>
@@ -163,7 +163,7 @@
 
 	<LegalSection id="law" title="12. Governing law and disputes">
 		<p>
-			<!-- TODO: confirm governing law/jurisdiction wording with JKT legal counsel before submission -->
+			<!-- TODO: confirm governing law/jurisdiction wording with J K T legal counsel before submission -->
 			These terms are governed by the laws of Myanmar. Disputes will first be addressed by good-faith
 			negotiation with us at {site.email}; unresolved disputes are subject to the courts of Yangon,
 			Myanmar.

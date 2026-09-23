@@ -42,7 +42,7 @@
 		{
 			title: 'Download & sign up',
 			description:
-				'Install Owl Reward, create your account with just a phone number, and start collecting in under a minute.'
+				'Install Owl Reward, create your account with your email address, and start collecting in under a minute. Phone-number sign-up is on the way.'
 		},
 		{
 			title: 'Shop & scan',
@@ -63,13 +63,13 @@
 	>
 	<meta
 		name="description"
-		content="Owl Reward is the loyalty app from Owlvyra by JKT Co.,Ltd: owl points, digital stamp cards, campaigns and voucher redemption at partner shops across Myanmar."
+		content="Owl Reward is the loyalty app from Owlvyra by J K T Company Limited: owl points, digital stamp cards, campaigns and voucher redemption at partner shops across Myanmar."
 	/>
 	<link rel="canonical" href="{site.url}/owl-reward" />
 	<meta property="og:title" content="{site.appName} App — Points, Stamps & Vouchers" />
 	<meta
 		property="og:description"
-		content="One loyalty wallet for Myanmar: points, digital stamps, campaigns and vouchers. Download Owl Reward, part of Owlvyra by JKT Co.,Ltd."
+		content="One loyalty wallet for Myanmar: points, digital stamps, campaigns and vouchers. Owl Reward, part of Owlvyra by J K T Company Limited — coming soon to Google Play and the App Store."
 	/>
 	<meta property="og:url" content="{site.url}/owl-reward" />
 </svelte:head>
@@ -151,28 +151,36 @@
 </Section>
 
 <!-- Download -->
-<section
-	id="download"
-	class="starfield relative overflow-hidden bg-gradient-to-b from-night-900 to-night-950 text-cream-50"
->
+<section id="download" class="starfield relative overflow-hidden bg-night-900 text-cream-50">
 	<div
 		class="pointer-events-none absolute top-0 left-1/2 size-[32rem] -translate-x-1/2 -translate-y-1/2 rounded-full bg-gold-500/15 blur-3xl"
 		aria-hidden="true"
 	></div>
 	<div class="relative mx-auto max-w-3xl px-5 py-24 text-center sm:px-8">
 		<OwlMascot class="mx-auto mb-8 w-32 sm:w-40" />
-		<h2 class="font-display text-3xl font-bold tracking-tight text-balance sm:text-4xl">
+		<h2
+			class="font-display text-3xl font-bold tracking-tight text-balance text-cream-50 sm:text-4xl"
+		>
 			Ready when you are — <span class="text-gold-400">day or night.</span>
 		</h2>
-		<p class="mx-auto mt-4 max-w-xl text-night-200">
-			Owl Reward is available on Google Play and the App Store. Sign up with your phone number and
-			start collecting today.
+		<p class="mx-auto mt-4 max-w-xl text-night-100">
+			{#if site.stores.live}
+				Owl Reward is available on Google Play and the App Store. Sign up with your email and start
+				collecting today — phone-number sign-in is coming soon.
+			{:else}
+				Owl Reward is coming soon to Google Play and the App Store. Sign up with your email and
+				start collecting from day one.
+			{/if}
 		</p>
 		<div class="mt-10 flex justify-center">
 			<StoreBadges />
 		</div>
-		<p class="mt-6 text-xs text-night-400">
-			Store links open the official listings on Google Play and the Apple App Store.
+		<p class="mt-6 text-xs text-night-300">
+			{#if site.stores.live}
+				Store links open the official listings on Google Play and the Apple App Store.
+			{:else}
+				The badges light up the day the app lands on each store.
+			{/if}
 		</p>
 	</div>
 </section>

@@ -1,6 +1,7 @@
 <script lang="ts">
 	import { addressLine, navLinks, site } from '$lib/config/site';
 	import { resolve } from '$app/paths';
+	import JktLogo from './JktLogo.svelte';
 	import OwlLogo from './OwlLogo.svelte';
 
 	const year = new Date().getFullYear();
@@ -20,8 +21,16 @@
 					{site.brand} by {site.legalName} — business software for Myanmar. The Owlvyra ERP suite runs
 					the back office; the Owl Reward app rewards the customers who keep it busy.
 				</p>
-				<div class="mt-6 space-y-1.5 text-sm not-italic">
-					<p class="font-display font-semibold text-cream-50">{site.legalName}</p>
+				<p
+					class="mt-3 font-display text-xs font-semibold tracking-[0.22em] text-gold-300 uppercase"
+				>
+					Silent · Swift · Smart — see what others miss
+				</p>
+				<div class="mt-10 space-y-1.5 text-sm leading-relaxed text-night-300 not-italic">
+					<div class="mb-3 flex items-center gap-3">
+						<JktLogo height={28} />
+						<span class="font-display font-semibold text-cream-50">{site.legalName}</span>
+					</div>
 					<p>{addressLine}</p>
 					<p>
 						<a href="tel:{site.phone}" class="transition-colors hover:text-gold-300" rel="external"
@@ -117,22 +126,35 @@
 					Get the app
 				</h2>
 				<ul class="mt-4 space-y-2.5 text-sm">
-					<li>
-						<a
-							href={site.stores.playStore}
-							target="_blank"
-							rel="external noopener noreferrer"
-							class="transition-colors hover:text-cream-50">Google Play</a
-						>
-					</li>
-					<li>
-						<a
-							href={site.stores.appStore}
-							target="_blank"
-							rel="external noopener noreferrer"
-							class="transition-colors hover:text-cream-50">App Store</a
-						>
-					</li>
+					{#if site.stores.live}
+						<li>
+							<a
+								href={site.stores.playStore}
+								target="_blank"
+								rel="external noopener noreferrer"
+								class="transition-colors hover:text-cream-50">Google Play</a
+							>
+						</li>
+						<li>
+							<a
+								href={site.stores.appStore}
+								target="_blank"
+								rel="external noopener noreferrer"
+								class="transition-colors hover:text-cream-50">App Store</a
+							>
+						</li>
+					{:else}
+						<li>
+							<a href={resolve('/owl-reward')} class="transition-colors hover:text-cream-50"
+								>Google Play — soon</a
+							>
+						</li>
+						<li>
+							<a href={resolve('/owl-reward')} class="transition-colors hover:text-cream-50"
+								>App Store — soon</a
+							>
+						</li>
+					{/if}
 				</ul>
 			</div>
 		</div>

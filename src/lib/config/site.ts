@@ -3,7 +3,7 @@
  * user-editable value on the website.
  *
  * Every field marked with `// TODO:` is a deliberate placeholder that MUST be
- * replaced with real JKT Co.,Ltd information before submitting the Owl Reward
+ * replaced with real J K T Company Limited information before submitting the Owl Reward
  * app to Apple App Store / Google Play review. Apple and Google verify that
  * this website's company information matches the legal registration.
  */
@@ -16,9 +16,9 @@ export const site = {
 
 	/** Registered legal entity name — must match company registration exactly. */
 	// TODO: verify exact legal name as registered (punctuation, spacing)
-	legalName: 'JKT Co.,Ltd',
+	legalName: 'J K T Company Limited',
 
-	/** Brand under which all JKT products live. */
+	/** Brand under which all J K T products live. */
 	brand: 'Owlvyra',
 
 	/** Mobile app being showcased on the stores. */
@@ -55,6 +55,13 @@ export const site = {
 
 	/** Store listing URLs for the Owl Reward app. */
 	stores: {
+		/**
+		 * Whether the app is actually published on both stores. While false,
+		 * every badge renders in a disabled "Soon" state with no link, so the
+		 * site never points at dead listing URLs.
+		 */
+		// TODO: set to true and fill in both listing URLs when the app ships
+		live: false,
 		/** Google Play listing — placeholder until the listing is live. */
 		// TODO: replace with the real Google Play listing URL
 		playStore: 'https://play.google.com/store/apps/details?id=mm.com.jkt.owlreward',
@@ -64,7 +71,6 @@ export const site = {
 	},
 
 	/** Year the company was established (About page copy). */
-	// TODO: replace with real founding year
 	foundedYear: 2020
 } as const;
 

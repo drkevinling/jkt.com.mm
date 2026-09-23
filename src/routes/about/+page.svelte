@@ -1,5 +1,6 @@
 <script lang="ts">
 	import { resolve } from '$app/paths';
+	import JktLogo from '$lib/components/JktLogo.svelte';
 	import OwlLogo from '$lib/components/OwlLogo.svelte';
 	import Section from '$lib/components/Section.svelte';
 	import { addressLine, site } from '$lib/config/site';
@@ -9,13 +10,13 @@
 	<title>About {site.legalName} — the company behind {site.brand}</title>
 	<meta
 		name="description"
-		content="JKT Co.,Ltd is a Yangon-based technology company building the Owlvyra product family: the Owlvyra ERP web suite and the Owl Reward loyalty app for Myanmar."
+		content="J K T Company Limited is a Yangon-based technology company building the Owlvyra product family: the Owlvyra ERP web suite and the Owl Reward loyalty app for Myanmar."
 	/>
 	<link rel="canonical" href="{site.url}/about" />
 	<meta property="og:title" content="About {site.legalName} — the company behind {site.brand}" />
 	<meta
 		property="og:description"
-		content="JKT Co.,Ltd builds the Owlvyra ERP suite and the Owl Reward loyalty app from Yangon, Myanmar."
+		content="J K T Company Limited builds the Owlvyra ERP suite and the Owl Reward loyalty app from Yangon, Myanmar."
 	/>
 	<meta property="og:url" content="{site.url}/about" />
 </svelte:head>
@@ -40,6 +41,12 @@
 			accounting, stock, sales and payroll for growing businesses — and
 			<span class="font-semibold text-gold-300">{site.appName}</span>, the loyalty app that rewards
 			the customers who keep those businesses busy.
+		</p>
+		<p class="mt-5 max-w-2xl text-base leading-relaxed text-night-200">
+			Like the owl that inspires the brand, we build
+			<span class="font-semibold text-gold-300">silent</span> — quiet precision,
+			<span class="font-semibold text-gold-300">swift</span> — excellent performance, and
+			<span class="font-semibold text-gold-300">smart</span> — intelligent workflow. See what others miss.
 		</p>
 	</div>
 </section>
@@ -100,8 +107,8 @@
 			<h3 class="font-display text-xl font-semibold text-cream-50">{site.appName}</h3>
 			<p class="mt-3 leading-relaxed text-night-200">
 				The loyalty app for Myanmar shoppers: points, digital stamp cards, campaigns and vouchers
-				from partner shops — one wallet instead of a drawer full of punch cards. Available on Google
-				Play and the App Store.
+				from partner shops — one wallet instead of a drawer full of punch cards.
+				{#if site.stores.live}Available on{:else}Coming soon to{/if} Google Play and the App Store.
 			</p>
 			<a
 				href={resolve('/owl-reward')}
@@ -120,6 +127,9 @@
 	title="The details reviewers and partners ask for"
 >
 	<dl class="mx-auto grid max-w-3xl gap-x-10 gap-y-6 text-left sm:grid-cols-[auto_1fr]">
+		<div class="col-span-full mb-2 flex sm:justify-self-start">
+			<JktLogo height={48} />
+		</div>
 		<dt class="font-semibold text-gold-300">Legal entity</dt>
 		<dd class="text-night-200">{site.legalName}</dd>
 		<dt class="font-semibold text-gold-300">Head office</dt>
@@ -129,7 +139,7 @@
 		<dt class="font-semibold text-gold-300">Products</dt>
 		<dd class="text-night-200">
 			Owlvyra ERP — business software suite (web)<br />
-			{site.appName} — loyalty &amp; rewards mobile application (iOS &amp; Android)
+			{site.appName} — loyalty &amp; rewards mobile application (iOS &amp; Android — coming soon)
 		</dd>
 		<dt class="font-semibold text-gold-300">Contact</dt>
 		<dd class="text-night-200">

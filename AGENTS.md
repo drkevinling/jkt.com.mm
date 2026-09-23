@@ -1,6 +1,6 @@
-# AGENTS.md — JKT Co.,Ltd / Owlvyra website
+# AGENTS.md — J K T Company Limited / Owlvyra website
 
-Marketing site for **JKT Co.,Ltd** under the **Owlvyra** brand: the
+Marketing site for **J K T Company Limited** under the **Owlvyra** brand: the
 **Owlvyra ERP** web suite (`/erp`) and the **Owl Reward** loyalty app
 (`/owl-reward`). Fully prerendered static site, deployed on **GitHub Pages**
 (public repo, deploy-from-Actions, auto on push to `main`). Purpose: pass

@@ -2,15 +2,15 @@
 	import LegalSection from '$lib/components/LegalSection.svelte';
 	import { addressLine, site } from '$lib/config/site';
 
-	// TODO: set the real policy effective date before store submission
-	const effectiveDate = 'TODO — effective date';
+	// Last-updated date shown on the policy; bump it whenever the policy changes
+	const lastUpdated = '16 September 2026';
 </script>
 
 <svelte:head>
 	<title>Privacy Policy — {site.legalName} | {site.brand} &amp; {site.appName}</title>
 	<meta
 		name="description"
-		content="Privacy policy of JKT Co.,Ltd covering the jkt.com.mm website, the Owlvyra ERP web applications and the Owl Reward mobile application: what we collect, why, and the rights you have."
+		content="Privacy policy of J K T Company Limited covering the jkt.com.mm website, the Owlvyra ERP web applications and the Owl Reward mobile application: what we collect, why, and the rights you have."
 	/>
 	<link rel="canonical" href="{site.url}/privacy-policy" />
 	<meta
@@ -19,7 +19,7 @@
 	/>
 	<meta
 		property="og:description"
-		content="How JKT Co.,Ltd collects, uses and protects your information on this website, in the Owlvyra ERP web apps and in the Owl Reward app."
+		content="How J K T Company Limited collects, uses and protects your information on this website, in the Owlvyra ERP web apps and in the Owl Reward app."
 	/>
 	<meta property="og:url" content="{site.url}/privacy-policy" />
 </svelte:head>
@@ -37,7 +37,7 @@
 			website, in the Owlvyra business web applications (including Owlvyra ERP) and in the Owl Reward
 			mobile application (together, the "Services"). It applies to all of them.
 		</p>
-		<p class="mt-3 text-sm text-night-300">Effective date: {effectiveDate}</p>
+		<p class="mt-3 text-sm text-night-300">Last updated: {lastUpdated}</p>
 	</div>
 </section>
 
@@ -65,11 +65,13 @@
 		<p><strong>2.1 Information you give us (Owl Reward app).</strong></p>
 		<ul class="list-disc space-y-2 pl-6">
 			<li>
-				Account details: your mobile phone number, display name and, if you choose, a profile photo.
+				Account details: your email address, display name and, if you choose, a profile photo.
 			</li>
 			<li>
 				<!-- TODO: confirm the exact registration data fields with the app team before submission -->
-				Verification data: the one-time password sent to your phone number to verify your account.
+				Verification data: the verification link or one-time password sent to your email address to verify
+				your account. Phone-number (SMS) sign-up will be offered later and covered by this policy when
+				it arrives.
 			</li>
 			<li>Reward activity: points, stamps, vouchers, redemptions and tier status.</li>
 			<li>Communications: messages you send to our support team.</li>
@@ -101,27 +103,27 @@
 				Location data: only if you grant permission, and only to show partner shops near you.
 			</li>
 			<li>
-				<!-- TODO: name the analytics SDK(s) actually used (e.g. Firebase Analytics) before submission -->
-				Usage data: interactions with app features, collected through our analytics provider(s).
+				Usage data: interactions with app features, collected through our analytics provider,
+				Sentry.
 			</li>
 		</ul>
 		<p><strong>2.4 Website visitors.</strong></p>
 		<ul class="list-disc space-y-2 pl-6">
 			<li>
-				<!-- TODO: confirm hosting/CDN logging details (GitHub Pages) and list any analytics used on the website -->
-				Server logs: your browser requests our pages, and standard technical data (IP address, browser
-				type, timestamp) may be processed by our hosting provider for security and delivery.
+				Server logs: your browser requests our pages, and standard technical data (IP address,
+				browser type, timestamp) may be processed by our hosting provider (GitHub Pages) for
+				security and delivery.
 			</li>
 			<li>
-				This website has no accounts, no forms and sets no advertising cookies. Contact happens by
-				email or phone only.
+				This website runs no analytics, has no accounts, no forms and sets no cookies of any kind.
+				Contact happens by email or phone only.
 			</li>
 		</ul>
 	</LegalSection>
 
 	<LegalSection id="how-we-use" title="3. How we use information">
 		<ul class="list-disc space-y-2 pl-6">
-			<li>To create and secure your Owl Reward account and verify your phone number.</li>
+			<li>To create and secure your Owl Reward account and verify your email address.</li>
 			<li>
 				To record points, stamps and vouchers you earn and redeem, and keep an accurate balance.
 			</li>
@@ -152,9 +154,13 @@
 				(for example that a scan succeeded) — not your full profile.
 			</li>
 			<li>
-				<!-- TODO: list actual service providers (hosting, SMS/OTP gateway, push notifications, analytics) before submission -->
-				<strong>Service providers</strong> that help us operate the Services, under instructions and appropriate
-				safeguards.
+				<strong>Service providers</strong> that help us operate the Services — for example
+				DigitalOcean (application hosting in Singapore) and Sentry, our analytics provider (<a
+					href="https://sentry.io/privacy/"
+					class="text-gold-700 underline underline-offset-4 dark:text-gold-300"
+					rel="external noopener noreferrer">sentry.io/privacy</a
+				>) — under instructions and appropriate safeguards.
+				<!-- TODO: add SMS/push providers here if introduced later -->
 			</li>
 			<li>
 				<strong>Authorities</strong>, where we are legally required to disclose information.
@@ -164,10 +170,9 @@
 
 	<LegalSection id="retention" title="6. How long we keep information">
 		<p>
-			<!-- TODO: set the real retention periods (account records, transaction history, logs) before submission -->
-			We keep account and reward records while your account is active and for a period afterwards for
-			accounting, dispute and fraud-prevention purposes. Website server logs are kept for a limited security
-			period. De-identified statistics may be kept longer.
+			We retain account and reward records while your account is active and for up to 3 years after
+			account deletion for legal, tax, and fraud-prevention compliance. Server logs are
+			automatically purged after 90 days. De-identified statistics may be kept longer.
 		</p>
 	</LegalSection>
 
@@ -209,18 +214,18 @@
 
 	<LegalSection id="children" title="9. Children">
 		<p>
-			<!-- TODO: confirm the minimum age policy (13 or 16) and parental-consent approach before submission -->
-			The Services are not directed to children, and we do not knowingly collect personal information
-			from children. If you believe a child has provided us information, contact us and we will delete
-			it.
+			The Services are intended for users aged 13 and older (or 18 where required by local law). We
+			do not knowingly collect personal information from children under 13. If you believe a child
+			has provided us information, contact us and we will delete it.
 		</p>
 	</LegalSection>
 
 	<LegalSection id="transfers" title="10. International transfers">
 		<p>
-			<!-- TODO: list countries/regions where data is stored or processed (e.g. app backend region) before submission -->
-			Some of our service providers may process information outside Myanmar. Where that happens, we use
-			appropriate safeguards such as contractual data protection terms.
+			Your information may be processed outside Myanmar: our web applications are hosted on
+			DigitalOcean in Singapore, our analytics are processed by Sentry, and this website is hosted
+			on GitHub Pages. Where information is transferred outside Myanmar, we use appropriate
+			safeguards such as contractual data protection terms with those providers.
 		</p>
 	</LegalSection>
 

@@ -14,7 +14,7 @@
 	<title>Contact {site.legalName} — {site.brand} &amp; {site.appName} Support</title>
 	<meta
 		name="description"
-		content="Get in touch with JKT Co.,Ltd — the company behind Owlvyra ERP and the Owl Reward app. Email, hotline and office address in Yangon, Myanmar."
+		content="Get in touch with J K T Company Limited — the company behind Owlvyra ERP and the Owl Reward app. Email, hotline and office address in Yangon, Myanmar."
 	/>
 	<link rel="canonical" href="{site.url}/contact" />
 	<meta
@@ -23,7 +23,7 @@
 	/>
 	<meta
 		property="og:description"
-		content="Email, hotline and office address for JKT Co.,Ltd, the Yangon company behind Owlvyra ERP and the Owl Reward loyalty app."
+		content="Email, hotline and office address for J K T Company Limited, the Yangon company behind Owlvyra ERP and the Owl Reward loyalty app."
 	/>
 	<meta property="og:url" content="{site.url}/contact" />
 </svelte:head>
