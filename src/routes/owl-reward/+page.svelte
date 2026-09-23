@@ -1,4 +1,5 @@
 <script lang="ts">
+	import OwlMascot from '$lib/components/OwlMascot.svelte';
 	import PhoneMockup from '$lib/components/PhoneMockup.svelte';
 	import Section from '$lib/components/Section.svelte';
 	import StoreBadges from '$lib/components/StoreBadges.svelte';
@@ -57,16 +58,18 @@
 </script>
 
 <svelte:head>
-	<title>Owl Reward App — Points, Stamps &amp; Vouchers | JKT Co.,Ltd</title>
+	<title
+		>{site.appName} App — Points, Stamps &amp; Vouchers | {site.brand} by {site.legalName}</title
+	>
 	<meta
 		name="description"
-		content="Owl Reward is the loyalty app by JKT Co.,Ltd: owl points, digital stamp cards, campaigns and voucher redemption at partner shops across Myanmar."
+		content="Owl Reward is the loyalty app from Owlvyra by JKT Co.,Ltd: owl points, digital stamp cards, campaigns and voucher redemption at partner shops across Myanmar."
 	/>
 	<link rel="canonical" href="{site.url}/owl-reward" />
-	<meta property="og:title" content="Owl Reward App — Points, Stamps & Vouchers" />
+	<meta property="og:title" content="{site.appName} App — Points, Stamps & Vouchers" />
 	<meta
 		property="og:description"
-		content="One loyalty wallet for Myanmar: points, digital stamps, campaigns and vouchers. Download Owl Reward by JKT Co.,Ltd."
+		content="One loyalty wallet for Myanmar: points, digital stamps, campaigns and vouchers. Download Owl Reward, part of Owlvyra by JKT Co.,Ltd."
 	/>
 	<meta property="og:url" content="{site.url}/owl-reward" />
 </svelte:head>
@@ -92,8 +95,9 @@
 				A whole loyalty programme, <span class="text-gold-400">living in your pocket.</span>
 			</h1>
 			<p class="mt-6 max-w-lg text-lg leading-relaxed text-night-200">
-				Owl Reward brings together points, stamp cards, campaigns and vouchers from partner shops
-				across Myanmar into one calm, friendly app — built by {site.legalName}.
+				{site.appName} is the mobile companion of the {site.brand} family — points, stamp cards, campaigns
+				and vouchers from partner shops across Myanmar in one calm, friendly app, built by
+				{site.legalName}.
 			</p>
 			<div class="mt-8">
 				<StoreBadges />
@@ -156,6 +160,7 @@
 		aria-hidden="true"
 	></div>
 	<div class="relative mx-auto max-w-3xl px-5 py-24 text-center sm:px-8">
+		<OwlMascot class="mx-auto mb-8 w-32 sm:w-40" />
 		<h2 class="font-display text-3xl font-bold tracking-tight text-balance sm:text-4xl">
 			Ready when you are — <span class="text-gold-400">day or night.</span>
 		</h2>

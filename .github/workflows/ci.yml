@@ -35,8 +35,9 @@ jobs:
         run: npm run check
 
       - name: Build
-        env:
-          BASE_PATH: /${{ github.event.repository.name }}
+        # Custom domain (jkt.com.mm) serves GitHub Pages from the root, so no
+        # BASE_PATH is set. If the site ever moves back to the github.io
+        # project URL, set BASE_PATH: /${{ github.event.repository.name }}
         run: npm run build
 
       - name: Upload site artifact

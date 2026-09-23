@@ -7,16 +7,19 @@
 </script>
 
 <svelte:head>
-	<title>Terms &amp; Conditions — JKT Co.,Ltd &amp; Owl Reward</title>
+	<title>Terms &amp; Conditions — {site.legalName} | {site.brand} &amp; {site.appName}</title>
 	<meta
 		name="description"
-		content="Terms and conditions governing use of the jkt.com.mm website and the Owl Reward mobile application provided by JKT Co.,Ltd."
+		content="Terms and conditions governing use of the jkt.com.mm website, the Owlvyra ERP web applications and the Owl Reward mobile application provided by JKT Co.,Ltd."
 	/>
 	<link rel="canonical" href="{site.url}/terms" />
-	<meta property="og:title" content="Terms & Conditions — JKT Co.,Ltd & Owl Reward" />
+	<meta
+		property="og:title"
+		content="Terms & Conditions — {site.legalName} | {site.brand} & {site.appName}"
+	/>
 	<meta
 		property="og:description"
-		content="Terms governing use of the jkt.com.mm website and the Owl Reward app by JKT Co.,Ltd."
+		content="Terms governing use of the jkt.com.mm website, the Owlvyra ERP web apps and the Owl Reward app by JKT Co.,Ltd."
 	/>
 	<meta property="og:url" content="{site.url}/terms" />
 </svelte:head>
@@ -32,8 +35,11 @@
 			Terms &amp; Conditions
 		</h1>
 		<p class="mt-4 text-night-200">
-			These terms govern your use of the jkt.com.mm website and the Owl Reward mobile application
-			(the "Services") provided by {site.legalName}.
+			These terms govern your use of the jkt.com.mm website, the Owlvyra business web applications
+			(including Owlvyra ERP) and the Owl Reward mobile application (the "Services") provided by
+			{site.legalName}. Business customers who use Owlvyra ERP agree to the commercial terms
+			provided when their account is provisioned; these terms continue to apply to their use of the
+			Services.
 		</p>
 		<p class="mt-3 text-sm text-night-300">Effective date: {effectiveDate}</p>
 	</div>
@@ -118,9 +124,9 @@
 
 	<LegalSection id="ip" title="7. Intellectual property">
 		<p>
-			The Services, including the Owl Reward name, logo, design and software, are owned by
-			{site.legalName} or its licensors and are protected by intellectual property laws. You receive a
-			limited, revocable, non-exclusive licence to use the app for its intended purpose.
+			The Services, including the {site.brand} and {site.appName} names, logos, designs and software,
+			are owned by {site.legalName} or its licensors and are protected by intellectual property laws.
+			You receive a limited, revocable, non-exclusive licence to use the Services for their intended purpose.
 		</p>
 	</LegalSection>
 

@@ -1,69 +1,56 @@
 <script lang="ts">
 	import { resolve } from '$app/paths';
 	import FeatureCard from '$lib/components/FeatureCard.svelte';
-	import PhoneMockup from '$lib/components/PhoneMockup.svelte';
+	import OwlMascot from '$lib/components/OwlMascot.svelte';
 	import Section from '$lib/components/Section.svelte';
 	import StoreBadges from '$lib/components/StoreBadges.svelte';
 	import OwlLogo from '$lib/components/OwlLogo.svelte';
 	import { addressLine, site } from '$lib/config/site';
 
-	const categories = [
-		'Food & Beverage',
-		'Fashion',
-		'Health & Beauty',
-		'Lifestyle',
-		'Healthcare',
-		'Travel & Leisure'
+	const modules = [
+		'Accounting',
+		'Inventory',
+		'Sales & POS',
+		'HR & Payroll',
+		'Loyalty',
+		'Finance',
+		'Fixed assets',
+		'Expense'
 	];
 
-	const steps = [
+	const growSteps = [
 		{
-			title: 'Download & sign up',
+			title: 'Start with one module',
 			description:
-				'Install Owl Reward, create your account with just a phone number, and start collecting in under a minute.'
+				'Accounting, a till, payroll, or a loyalty programme — every Owlvyra module works on its own, on day one.'
 		},
 		{
-			title: 'Shop & scan',
+			title: 'Run them together',
 			description:
-				'Pay at any partner shop and show your personal QR code — points and stamps land in your wallet instantly.'
+				'Books, stock and selling post to each other: a sale decrements inventory and journals itself. No re-entry, no spreadsheets in between.'
 		},
 		{
-			title: 'Redeem rewards',
+			title: 'The whole back office',
 			description:
-				'Turn points into vouchers, free items and member-only deals. The more you collect, the higher you climb.'
-		}
-	];
-
-	const features = [
-		{
-			title: 'Owl Points',
-			description:
-				'Every qualifying purchase adds points to your balance. Watch your tier glow up from Fledgling to Gold Owl and unlock better rates.'
-		},
-		{
-			title: 'Stamp cards',
-			description:
-				'Beloved punch cards, reborn. Collect digital stamps at your regular spots and never lose a free coffee to a lost card again.'
-		},
-		{
-			title: 'Campaigns & vouchers',
-			description:
-				'Seasonal campaigns, double-point weekends and member vouchers from partner brands — all in one feed, all redeemable in a tap.'
+				'The full suite on one plan. Group features — multiple companies, industry packs — are on the way for Enterprise.'
 		}
 	];
 </script>
 
 <svelte:head>
-	<title>Owl Reward — Loyalty &amp; Rewards App by JKT Co.,Ltd</title>
+	<title>{site.brand} — Business Software &amp; Loyalty Apps by {site.legalName}</title>
 	<meta
 		name="description"
-		content="Owl Reward by JKT Co.,Ltd is Myanmar's loyalty app. Collect points, stamps and vouchers at your favourite shops in Yangon and beyond."
+		content="Owlvyra by JKT Co.,Ltd builds the Owlvyra ERP suite — accounting, inventory, POS and HR & payroll web apps — and the Owl Reward loyalty app for businesses in Myanmar."
 	/>
 	<link rel="canonical" href={site.url} />
-	<meta property="og:title" content="Owl Reward — Loyalty & Rewards App by JKT Co.,Ltd" />
+	<meta
+		property="og:title"
+		content="{site.brand} — Business Software & Loyalty Apps by {site.legalName}"
+	/>
 	<meta
 		property="og:description"
-		content="Collect points, stamps and vouchers at your favourite shops across Myanmar. Loyalty that never sleeps."
+		content="The Owlvyra ERP suite runs the back office; the Owl Reward app rewards the customers who keep it busy. Built in Yangon, Myanmar."
 	/>
 	<meta property="og:url" content={site.url} />
 </svelte:head>
@@ -86,38 +73,36 @@
 			<p
 				class="animate-owl-twinkle inline-flex items-center gap-2 rounded-full border border-gold-500/40 bg-gold-500/10 px-4 py-1.5 text-xs font-semibold tracking-[0.16em] text-gold-300 uppercase"
 			>
-				Loyalty that never sleeps
+				{site.brand} by JKT
 			</p>
 			<h1
 				class="mt-6 font-display text-4xl leading-[1.08] font-bold tracking-tight text-balance sm:text-5xl lg:text-6xl"
 			>
-				Every purchase earns you <span class="text-gold-400">more than a receipt.</span>
+				Run the back office. <span class="text-gold-400">Reward the front.</span>
 			</h1>
 			<p class="mt-6 max-w-lg text-lg leading-relaxed text-night-200">
-				Owl Reward turns everyday shopping into points, stamps and real rewards at partner shops
-				across Myanmar — one app in your pocket instead of a drawer full of punch cards.
+				{site.brand} is the product family from {site.legalName}: a web-based ERP suite that runs
+				accounting, stock, sales and payroll — and {site.appName}, the loyalty app your customers
+				carry in their pocket. Built in Yangon for Myanmar businesses.
 			</p>
 			<div class="mt-8 flex flex-wrap items-center gap-4">
 				<a
-					href={resolve('/owl-reward#download')}
+					href={resolve('/erp')}
 					class="rounded-full bg-gold-500 px-7 py-3.5 font-display font-semibold text-night-950 shadow-glow-gold transition hover:bg-gold-400"
 				>
-					Get the app
+					Explore Owlvyra ERP
 				</a>
 				<a
-					href="#how-it-works"
+					href={resolve('/owl-reward#download')}
 					class="rounded-full border border-night-600 px-7 py-3.5 font-display font-semibold text-cream-50 transition hover:border-gold-400 hover:text-gold-300"
 				>
-					How it works
+					Get Owl Reward
 				</a>
-			</div>
-			<div class="mt-10">
-				<StoreBadges />
 			</div>
 		</div>
 
-		<div class="flex justify-center lg:justify-end">
-			<PhoneMockup />
+		<div class="flex items-end justify-center sm:justify-end">
+			<OwlMascot class="w-56 sm:w-72 lg:w-80" />
 		</div>
 	</div>
 
@@ -125,106 +110,114 @@
 		<div
 			class="mx-auto flex max-w-6xl flex-wrap items-center justify-center gap-x-8 gap-y-3 px-5 py-6 sm:px-8"
 		>
-			<span class="text-xs font-semibold tracking-[0.2em] text-night-400 uppercase">Earn at</span>
-			{#each categories as category (category)}
-				<span class="text-sm font-medium text-night-200">{category}</span>
+			<span class="text-xs font-semibold tracking-[0.2em] text-night-400 uppercase">
+				One suite, every module
+			</span>
+			{#each modules as module (module)}
+				<span class="text-sm font-medium text-night-200">{module}</span>
 			{/each}
 		</div>
 	</div>
 </section>
 
-<!-- How it works -->
+<!-- Product family -->
 <Section
-	id="how-it-works"
-	eyebrow="How it works"
-	title="From counter to reward in three steps"
-	description="No cards to carry, no paperwork to sign. Your phone is the loyalty programme."
+	eyebrow="The product family"
+	title="Two products, one owl watching your business"
+	description="The ERP suite serves the business; Owl Reward serves its customers. They connect — a sale can earn points — but each stands on its own."
 >
-	<div class="grid gap-6 md:grid-cols-3">
-		{#each steps as step, i (step.title)}
-			<article
-				class="relative rounded-card border border-cream-200 bg-white/80 p-6 shadow-card dark:border-night-700/60 dark:bg-night-800/70"
+	<div class="grid gap-6 lg:grid-cols-2">
+		<article
+			class="flex flex-col rounded-card border border-cream-200 bg-white/80 p-8 shadow-card dark:border-night-700/60 dark:bg-night-800/70"
+		>
+			<p
+				class="inline-flex w-fit items-center rounded-full border border-gold-500/40 bg-gold-500/10 px-3.5 py-1 text-xs font-semibold tracking-[0.14em] text-gold-700 uppercase dark:text-gold-300"
 			>
-				<span
-					class="absolute top-5 right-5 font-display text-5xl font-bold text-night-400 select-none dark:text-night-700"
-					aria-hidden="true"
+				Web apps
+			</p>
+			<h3 class="mt-4 font-display text-2xl font-bold text-night-900 dark:text-cream-50">
+				Owlvyra ERP
+			</h3>
+			<p class="mt-3 leading-relaxed text-ink-500 dark:text-night-300">
+				Accounting, inventory &amp; purchasing, sales and the till, HR &amp; payroll — one web suite
+				that posts to itself. Start with a single module and unfold the rest as the business grows,
+				without switching software or losing history.
+			</p>
+			<ul class="mt-5 flex flex-wrap gap-2">
+				{#each ['Accounting', 'Inventory', 'Sales & POS', 'HR & Payroll', 'Loyalty'] as chip (chip)}
+					<li
+						class="rounded-full border border-night-900/10 bg-cream-100 px-3 py-1 text-xs font-medium text-ink-700 dark:border-cream-50/10 dark:bg-night-700/60 dark:text-night-200"
+					>
+						{chip}
+					</li>
+				{/each}
+			</ul>
+			<div class="mt-7 flex flex-wrap gap-3 pt-1">
+				<a
+					href={resolve('/erp')}
+					class="rounded-full bg-night-900 px-6 py-2.5 font-display text-sm font-semibold text-cream-50 transition hover:bg-night-700 dark:bg-gold-500 dark:text-night-950 dark:hover:bg-gold-400"
 				>
-					0{i + 1}
-				</span>
-				<h3 class="font-display text-lg font-semibold text-night-900 dark:text-cream-50">
-					{step.title}
-				</h3>
-				<p class="mt-2 text-sm leading-relaxed text-ink-500 dark:text-night-300">
-					{step.description}
-				</p>
-			</article>
-		{/each}
+					Explore the suite
+				</a>
+				<a
+					href="mailto:{site.email}?subject={encodeURIComponent('Owlvyra ERP — access request')}"
+					class="rounded-full border border-night-900/15 px-6 py-2.5 font-display text-sm font-semibold text-night-900 transition hover:border-gold-500 hover:text-gold-700 dark:border-cream-50/15 dark:text-cream-50 dark:hover:border-gold-400 dark:hover:text-gold-300"
+				>
+					Request access
+				</a>
+			</div>
+		</article>
+
+		<article
+			class="flex flex-col rounded-card border border-cream-200 bg-white/80 p-8 shadow-card dark:border-night-700/60 dark:bg-night-800/70"
+		>
+			<p
+				class="inline-flex w-fit items-center rounded-full border border-gold-500/40 bg-gold-500/10 px-3.5 py-1 text-xs font-semibold tracking-[0.14em] text-gold-700 uppercase dark:text-gold-300"
+			>
+				Mobile app
+			</p>
+			<h3 class="mt-4 font-display text-2xl font-bold text-night-900 dark:text-cream-50">
+				{site.appName}
+			</h3>
+			<p class="mt-3 leading-relaxed text-ink-500 dark:text-night-300">
+				The loyalty app for Myanmar shoppers: points, digital stamp cards, campaigns and vouchers
+				from partner shops — one wallet instead of a drawer full of punch cards. On Google Play and
+				the App Store.
+			</p>
+			<ul class="mt-5 flex flex-wrap gap-2">
+				{#each ['Points wallet', 'Stamp cards', 'Campaigns', 'Vouchers', 'Member QR'] as chip (chip)}
+					<li
+						class="rounded-full border border-night-900/10 bg-cream-100 px-3 py-1 text-xs font-medium text-ink-700 dark:border-cream-50/10 dark:bg-night-700/60 dark:text-night-200"
+					>
+						{chip}
+					</li>
+				{/each}
+			</ul>
+			<div class="mt-7 flex flex-wrap items-center gap-4 pt-1">
+				<a
+					href={resolve('/owl-reward')}
+					class="rounded-full bg-night-900 px-6 py-2.5 font-display text-sm font-semibold text-cream-50 transition hover:bg-night-700 dark:bg-gold-500 dark:text-night-950 dark:hover:bg-gold-400"
+				>
+					See the app
+				</a>
+				<StoreBadges class="py-0.5" />
+			</div>
+		</article>
 	</div>
 </Section>
 
-<!-- Key features -->
+<!-- Grows with you -->
 <Section
 	variant="night"
-	eyebrow="Why Owl Reward"
-	title="Three ways the owl pays you back"
-	description="A loyalty wallet designed for how Myanmar actually shops — daily, local and mobile-first."
+	eyebrow="Grows with you"
+	title="Start with one module. Add the rest without starting over."
+	description="Every Owlvyra plan runs on the same suite and the same data — a business never re-enters its history to climb to the next step."
 >
 	<div class="grid gap-6 md:grid-cols-3">
-		{#each features as feature (feature.title)}
-			<FeatureCard variant="dark" title={feature.title} description={feature.description}>
+		{#each growSteps as step, i (step.title)}
+			<FeatureCard variant="dark" title={step.title} description={step.description}>
 				{#snippet icon()}
-					{#if feature.title === 'Owl Points'}
-						<svg
-							width="24"
-							height="24"
-							viewBox="0 0 24 24"
-							fill="none"
-							stroke="currentColor"
-							stroke-width="1.8"
-							aria-hidden="true"
-						>
-							<circle cx="9" cy="9" r="5.5" />
-							<circle cx="15" cy="9" r="5.5" />
-							<path
-								d="M12 14v7M8.5 18l3.5-3 3.5 3"
-								stroke-linecap="round"
-								stroke-linejoin="round"
-							/>
-						</svg>
-					{:else if feature.title === 'Stamp cards'}
-						<svg
-							width="24"
-							height="24"
-							viewBox="0 0 24 24"
-							fill="none"
-							stroke="currentColor"
-							stroke-width="1.8"
-							aria-hidden="true"
-						>
-							<rect x="3.5" y="5" width="17" height="14.5" rx="2.5" />
-							<circle cx="8.5" cy="10" r="1.6" />
-							<circle cx="15.5" cy="10" r="1.6" />
-							<circle cx="8.5" cy="15" r="1.6" />
-							<circle cx="15.5" cy="15" r="1.6" />
-						</svg>
-					{:else}
-						<svg
-							width="24"
-							height="24"
-							viewBox="0 0 24 24"
-							fill="none"
-							stroke="currentColor"
-							stroke-width="1.8"
-							aria-hidden="true"
-						>
-							<path
-								d="M4 8.5 20 4l-4.5 16-4-6.5L4 8.5Z"
-								stroke-linecap="round"
-								stroke-linejoin="round"
-							/>
-							<path d="m11.5 13.5 8.5-9.5" stroke-linecap="round" />
-						</svg>
-					{/if}
+					<span class="font-display text-lg font-bold" aria-hidden="true">0{i + 1}</span>
 				{/snippet}
 			</FeatureCard>
 		{/each}
@@ -244,8 +237,9 @@
 				Built in Yangon by {site.legalName}
 			</h2>
 			<p class="mt-3 max-w-2xl leading-relaxed text-ink-500 dark:text-night-300">
-				{site.legalName} builds practical digital products for Myanmar's consumers and retailers. Owl
-				Reward is our loyalty platform connecting shoppers with the local businesses they love.
+				{site.legalName} is a technology company building the {site.brand} family — practical software
+				for Myanmar's businesses and the people they serve. Every product is designed, developed and supported
+				from Yangon.
 			</p>
 			<p class="mt-3 text-sm text-ink-500 dark:text-night-300">{addressLine}</p>
 		</div>
@@ -258,7 +252,7 @@
 	</div>
 </section>
 
-<!-- Download CTA -->
+<!-- Contact CTA -->
 <section class="starfield relative overflow-hidden bg-night-950 text-cream-50">
 	<div
 		class="pointer-events-none absolute top-1/2 left-1/2 size-[36rem] -translate-x-1/2 -translate-y-1/2 rounded-full bg-gold-500/10 blur-3xl"
@@ -266,13 +260,25 @@
 	></div>
 	<div class="relative mx-auto max-w-3xl px-5 py-24 text-center sm:px-8">
 		<h2 class="font-display text-3xl font-bold tracking-tight text-balance sm:text-4xl">
-			Start earning tonight. <span class="text-gold-400">Redeem by morning.</span>
+			From the first kyat <span class="text-gold-400">to the full ledger.</span>
 		</h2>
 		<p class="mx-auto mt-4 max-w-xl text-night-200">
-			Download Owl Reward, find partner shops near you, and let every kyat work a little harder.
+			Want Owlvyra ERP for your business, or Owl Reward for your shop? Talk to us — we answer every
+			message.
 		</p>
-		<div class="mt-10 flex justify-center">
-			<StoreBadges />
+		<div class="mt-10 flex flex-wrap justify-center gap-4">
+			<a
+				href="mailto:{site.email}?subject={encodeURIComponent('Owlvyra ERP — access request')}"
+				class="rounded-full bg-gold-500 px-7 py-3 font-display font-semibold text-night-950 transition hover:bg-gold-400"
+			>
+				Request ERP access
+			</a>
+			<a
+				href={resolve('/contact')}
+				class="rounded-full border border-night-600 px-7 py-3 font-display font-semibold text-cream-50 transition hover:border-gold-400 hover:text-gold-300"
+			>
+				Contact us
+			</a>
 		</div>
 	</div>
 </section>

@@ -1,10 +1,12 @@
-# AGENTS.md — JKT Co.,Ltd / Owl Reward website
+# AGENTS.md — JKT Co.,Ltd / Owlvyra website
 
-Marketing site for **JKT Co.,Ltd** showcasing the **Owl Reward** loyalty app.
-Fully prerendered static site, deployed on **GitHub Pages** (public repo,
-deploy-from-Actions, auto on push to `main`). Purpose: pass Apple & Google
-organization developer account and app listing review — the site must clearly
-show legal entity info, privacy policy, and terms on valid TLS.
+Marketing site for **JKT Co.,Ltd** under the **Owlvyra** brand: the
+**Owlvyra ERP** web suite (`/erp`) and the **Owl Reward** loyalty app
+(`/owl-reward`). Fully prerendered static site, deployed on **GitHub Pages**
+(public repo, deploy-from-Actions, auto on push to `main`). Purpose: pass
+Apple & Google organization developer account and app listing review — the
+site must clearly show legal entity info, privacy policy, and terms on valid
+TLS.
 
 ## Commands
 
@@ -39,10 +41,11 @@ src/
   routes/
     +layout.svelte        # global shell: fonts, header/footer, SEO defaults
     layout.css            # Tailwind import + @theme design tokens
-    /                     # home
-    /owl-reward           # app showcase + store badges
+    /                     # Owlvyra brand overview + product family
+    /erp                  # Owlvyra ERP suite (modules, depths, packages)
+    /owl-reward           # Owl Reward app showcase + store badges
     /about /contact       # company info
-    /privacy-policy /terms# legal pages (policy covers website AND the app)
+    /privacy-policy /terms# legal pages (policy covers website, ERP webapps AND the app)
     sitemap.xml/+server.ts
 static/
     robots.txt favicon.svg favicon.ico og-image.png
@@ -66,11 +69,14 @@ static/
   deploys `build/` to GitHub Pages.
 - `.github/workflows/ci.yml` gates every PR/push with lint/check/build and
   deploys to Pages on `main` (Node 22, `npm ci`).
-- Public address: `https://drkevinling.github.io/jkt.com.mm/` — the CI build
-  sets `BASE_PATH=/<repo-name>` so assets resolve under the subpath; local
-  dev/build uses `/` (no BASE_PATH).
-- To move to a custom domain later: attach it in repo Pages settings, point
-  DNS at GitHub Pages, and update `site.url` in `src/lib/config/site.ts`.
+- Public address: `https://jkt.com.mm/` — custom domain on GitHub Pages
+  (configured in repo Settings → Pages + DNS pointing at GitHub Pages). The
+  site builds with root base path (no `BASE_PATH`); `site.url` in
+  `src/lib/config/site.ts` is the canonical origin. Until the custom domain
+  is attached in repo settings, the `github.io` URL will not resolve assets.
+- To revert to the `github.io` project URL: re-add
+  `BASE_PATH: /${{ github.event.repository.name }}` to the Build step in
+  `.github/workflows/ci.yml` and update `site.url`.
 
 ## PR checklist
 

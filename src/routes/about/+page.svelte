@@ -6,16 +6,16 @@
 </script>
 
 <svelte:head>
-	<title>About JKT Co.,Ltd — Company behind Owl Reward</title>
+	<title>About {site.legalName} — the company behind {site.brand}</title>
 	<meta
 		name="description"
-		content="JKT Co.,Ltd is a Yangon-based technology company building Owl Reward, the loyalty app that connects Myanmar shoppers with local businesses."
+		content="JKT Co.,Ltd is a Yangon-based technology company building the Owlvyra product family: the Owlvyra ERP web suite and the Owl Reward loyalty app for Myanmar."
 	/>
 	<link rel="canonical" href="{site.url}/about" />
-	<meta property="og:title" content="About JKT Co.,Ltd — Company behind Owl Reward" />
+	<meta property="og:title" content="About {site.legalName} — the company behind {site.brand}" />
 	<meta
 		property="og:description"
-		content="JKT Co.,Ltd is a Yangon-based technology company building Owl Reward, the loyalty app for Myanmar."
+		content="JKT Co.,Ltd builds the Owlvyra ERP suite and the Owl Reward loyalty app from Yangon, Myanmar."
 	/>
 	<meta property="og:url" content="{site.url}/about" />
 </svelte:head>
@@ -31,13 +31,15 @@
 		<h1
 			class="mt-6 max-w-3xl font-display text-4xl font-bold tracking-tight text-balance sm:text-5xl"
 		>
-			A Yangon company building products for the way Myanmar lives and shops.
+			A Yangon company building software for the way Myanmar works and shops.
 		</h1>
 		<p class="mt-6 max-w-2xl text-lg leading-relaxed text-night-200">
-			{site.legalName} is a technology company founded in {site.foundedYear}. We design and operate
-			<span class="font-semibold text-gold-300">Owl Reward</span>, a loyalty platform that helps
-			local businesses reward the customers who keep coming back — and helps shoppers get more from
-			every purchase.
+			{site.legalName} is a technology company founded in {site.foundedYear}. We design, build and
+			operate the <span class="font-semibold text-gold-300">{site.brand}</span> product family:
+			<span class="font-semibold text-gold-300">Owlvyra ERP</span>, the web suite that runs
+			accounting, stock, sales and payroll for growing businesses — and
+			<span class="font-semibold text-gold-300">{site.appName}</span>, the loyalty app that rewards
+			the customers who keep those businesses busy.
 		</p>
 	</div>
 </section>
@@ -52,9 +54,9 @@
 				Our mission
 			</h3>
 			<p class="mt-3 leading-relaxed text-ink-500 dark:text-night-300">
-				Make loyalty simple, fair and rewarding for everyone — giving every shop, café and clinic in
-				Myanmar the tools of a modern rewards programme, and every shopper one trustworthy wallet
-				for all of them.
+				Give every business in Myanmar — from a single counter to a group of companies — software
+				that starts simple, grows with them, and never asks them to re-enter their history. And give
+				every shopper one trustworthy wallet for the loyalty they have already earned.
 			</p>
 		</article>
 		<article
@@ -64,10 +66,49 @@
 				Our vision
 			</h3>
 			<p class="mt-3 leading-relaxed text-ink-500 dark:text-night-300">
-				A Myanmar where value flows back to loyal customers as naturally as change flows back from a
-				cashier — visible, instant and earned. We want Owl Reward to be the most trusted name in
-				everyday rewards.
+				A Myanmar where running a serious back office is as easy as opening a till, and value flows
+				back to loyal customers as naturally as change flows back from a cashier. We want
+				{site.brand} to be the most trusted name in both.
 			</p>
+		</article>
+	</div>
+</Section>
+
+<!-- Products -->
+<Section
+	variant="night"
+	eyebrow="What we build"
+	title="The Owlvyra product family"
+	description="One brand from one team in Yangon — business software on the web, loyalty in the pocket."
+>
+	<div class="grid gap-6 md:grid-cols-2">
+		<article class="rounded-card border border-night-700/60 bg-night-800/70 p-8 shadow-card">
+			<h3 class="font-display text-xl font-semibold text-cream-50">Owlvyra ERP</h3>
+			<p class="mt-3 leading-relaxed text-night-200">
+				A web-based business suite: Owlvyra Accounting, Owlvyra Inventory, Owlvyra Sales &amp; POS,
+				and Owlvyra HR &amp; Payroll. Every module works alone; together they post to each other.
+				Enterprise capabilities — industry packs and multi-company groups — are in progress.
+			</p>
+			<a
+				href={resolve('/erp')}
+				class="mt-5 inline-block rounded-full bg-gold-500 px-6 py-2.5 font-display text-sm font-semibold text-night-950 transition hover:bg-gold-400"
+			>
+				Explore the suite
+			</a>
+		</article>
+		<article class="rounded-card border border-night-700/60 bg-night-800/70 p-8 shadow-card">
+			<h3 class="font-display text-xl font-semibold text-cream-50">{site.appName}</h3>
+			<p class="mt-3 leading-relaxed text-night-200">
+				The loyalty app for Myanmar shoppers: points, digital stamp cards, campaigns and vouchers
+				from partner shops — one wallet instead of a drawer full of punch cards. Available on Google
+				Play and the App Store.
+			</p>
+			<a
+				href={resolve('/owl-reward')}
+				class="mt-5 inline-block rounded-full bg-gold-500 px-6 py-2.5 font-display text-sm font-semibold text-night-950 transition hover:bg-gold-400"
+			>
+				See the app
+			</a>
 		</article>
 	</div>
 </Section>
@@ -85,8 +126,11 @@
 		<dd class="text-night-200">{addressLine}</dd>
 		<dt class="font-semibold text-gold-300">Founded</dt>
 		<dd class="text-night-200">{site.foundedYear}</dd>
-		<dt class="font-semibold text-gold-300">Product</dt>
-		<dd class="text-night-200">Owl Reward — loyalty &amp; rewards mobile application</dd>
+		<dt class="font-semibold text-gold-300">Products</dt>
+		<dd class="text-night-200">
+			Owlvyra ERP — business software suite (web)<br />
+			{site.appName} — loyalty &amp; rewards mobile application (iOS &amp; Android)
+		</dd>
 		<dt class="font-semibold text-gold-300">Contact</dt>
 		<dd class="text-night-200">
 			<a
@@ -105,10 +149,10 @@
 	<div class="mt-12 flex flex-wrap items-center justify-center gap-6">
 		<OwlLogo size={56} wordmark={false} class="text-cream-50" />
 		<a
-			href={resolve('/owl-reward')}
+			href={resolve('/contact')}
 			class="rounded-full bg-gold-500 px-7 py-3 font-display font-semibold text-night-950 transition hover:bg-gold-400"
 		>
-			Explore Owl Reward
+			Contact us
 		</a>
 	</div>
 </Section>

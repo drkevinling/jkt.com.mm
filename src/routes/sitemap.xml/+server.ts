@@ -2,7 +2,15 @@ import { site } from '$lib/config/site';
 
 export const prerender = true;
 
-const routes = ['', '/owl-reward', '/about', '/contact', '/privacy-policy', '/terms'] as const;
+const routes = [
+	'',
+	'/erp',
+	'/owl-reward',
+	'/about',
+	'/contact',
+	'/privacy-policy',
+	'/terms'
+] as const;
 
 export async function GET() {
 	const xml = `<?xml version="1.0" encoding="UTF-8"?>

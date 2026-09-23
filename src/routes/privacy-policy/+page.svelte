@@ -7,16 +7,19 @@
 </script>
 
 <svelte:head>
-	<title>Privacy Policy — JKT Co.,Ltd &amp; Owl Reward</title>
+	<title>Privacy Policy — {site.legalName} | {site.brand} &amp; {site.appName}</title>
 	<meta
 		name="description"
-		content="Privacy policy of JKT Co.,Ltd covering the jkt.com.mm website and the Owl Reward mobile application: what we collect, why, and the rights you have."
+		content="Privacy policy of JKT Co.,Ltd covering the jkt.com.mm website, the Owlvyra ERP web applications and the Owl Reward mobile application: what we collect, why, and the rights you have."
 	/>
 	<link rel="canonical" href="{site.url}/privacy-policy" />
-	<meta property="og:title" content="Privacy Policy — JKT Co.,Ltd & Owl Reward" />
+	<meta
+		property="og:title"
+		content="Privacy Policy — {site.legalName} | {site.brand} & {site.appName}"
+	/>
 	<meta
 		property="og:description"
-		content="How JKT Co.,Ltd collects, uses and protects your information on this website and in the Owl Reward app."
+		content="How JKT Co.,Ltd collects, uses and protects your information on this website, in the Owlvyra ERP web apps and in the Owl Reward app."
 	/>
 	<meta property="og:url" content="{site.url}/privacy-policy" />
 </svelte:head>
@@ -31,7 +34,8 @@
 		<h1 class="mt-6 font-display text-4xl font-bold tracking-tight sm:text-5xl">Privacy Policy</h1>
 		<p class="mt-4 text-night-200">
 			This policy explains how {site.legalName} ("we", "us", "our") handles personal information on this
-			website and in the Owl Reward mobile application (the "Services"). It applies to both.
+			website, in the Owlvyra business web applications (including Owlvyra ERP) and in the Owl Reward
+			mobile application (together, the "Services"). It applies to all of them.
 		</p>
 		<p class="mt-3 text-sm text-night-300">Effective date: {effectiveDate}</p>
 	</div>
@@ -70,7 +74,23 @@
 			<li>Reward activity: points, stamps, vouchers, redemptions and tier status.</li>
 			<li>Communications: messages you send to our support team.</li>
 		</ul>
-		<p><strong>2.2 Information collected automatically.</strong></p>
+		<p><strong>2.2 Business customers (Owlvyra ERP).</strong></p>
+		<ul class="list-disc space-y-2 pl-6">
+			<li>
+				Business contact details: the company name, address and contact person you provide when you
+				request or are provisioned access.
+			</li>
+			<li>
+				<!-- TODO: confirm staff-account data handling with the ERP team before submission -->
+				Staff user accounts: names, phone numbers and role assignments created for your team by your business
+				administrator.
+			</li>
+			<li>
+				Business records: the customers, suppliers, items and transactions your business enters into
+				its own Owlvyra ERP account, which remain your business's data.
+			</li>
+		</ul>
+		<p><strong>2.3 Information collected automatically.</strong></p>
 		<ul class="list-disc space-y-2 pl-6">
 			<li>
 				App and device data: device model, operating system version, app version and language
@@ -85,7 +105,7 @@
 				Usage data: interactions with app features, collected through our analytics provider(s).
 			</li>
 		</ul>
-		<p><strong>2.3 Website visitors.</strong></p>
+		<p><strong>2.4 Website visitors.</strong></p>
 		<ul class="list-disc space-y-2 pl-6">
 			<li>
 				<!-- TODO: confirm hosting/CDN logging details (GitHub Pages) and list any analytics used on the website -->

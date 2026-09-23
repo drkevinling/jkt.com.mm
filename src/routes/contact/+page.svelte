@@ -11,16 +11,19 @@
 </script>
 
 <svelte:head>
-	<title>Contact JKT Co.,Ltd — Owl Reward Support</title>
+	<title>Contact {site.legalName} — {site.brand} &amp; {site.appName} Support</title>
 	<meta
 		name="description"
-		content="Get in touch with JKT Co.,Ltd — the company behind Owl Reward. Email, hotline and office address in Yangon, Myanmar."
+		content="Get in touch with JKT Co.,Ltd — the company behind Owlvyra ERP and the Owl Reward app. Email, hotline and office address in Yangon, Myanmar."
 	/>
 	<link rel="canonical" href="{site.url}/contact" />
-	<meta property="og:title" content="Contact JKT Co.,Ltd — Owl Reward Support" />
+	<meta
+		property="og:title"
+		content="Contact {site.legalName} — {site.brand} & {site.appName} Support"
+	/>
 	<meta
 		property="og:description"
-		content="Email, hotline and office address for JKT Co.,Ltd, the company behind the Owl Reward loyalty app."
+		content="Email, hotline and office address for JKT Co.,Ltd, the Yangon company behind Owlvyra ERP and the Owl Reward loyalty app."
 	/>
 	<meta property="og:url" content="{site.url}/contact" />
 </svelte:head>
@@ -36,12 +39,11 @@
 		<h1
 			class="mt-6 max-w-2xl font-display text-4xl font-bold tracking-tight text-balance sm:text-5xl"
 		>
-			Questions about Owl Reward or working with us?
+			Questions about {site.brand}, {site.appName}, or working with us?
 		</h1>
 		<p class="mt-6 max-w-2xl text-lg leading-relaxed text-night-200">
-			Whether you are a shopper who needs help with points, a merchant who wants to join the
-			network, or a partner with a proposal — we read everything and reply as quickly as the owl
-			flies.
+			Whether you want Owlvyra ERP for your business, need help with points in the app, or have a
+			partnership in mind — we read everything and reply as quickly as the owl flies.
 		</p>
 	</div>
 </section>
@@ -109,7 +111,7 @@
 				Call the hotline
 			</h2>
 			<p class="mt-2 text-sm text-ink-500 dark:text-night-300">
-				Member support, Monday to Saturday, 9:00–18:00 (MMT).
+				Customer support, Monday to Saturday, 9:00–18:00 (MMT).
 			</p>
 			<p
 				class="mt-3 font-semibold text-gold-700 group-hover:text-gold-600 dark:text-gold-300 dark:group-hover:text-gold-200"
@@ -149,25 +151,27 @@
 </section>
 
 <!-- Socials -->
-<section class="bg-cream-50 pb-20 dark:bg-night-950">
-	<div class="mx-auto max-w-6xl px-5 text-center sm:px-8">
-		<h2 class="font-display text-2xl font-bold text-night-900 dark:text-cream-50">
-			Follow the owl
-		</h2>
-		<p class="mt-2 text-ink-500 dark:text-night-300">
-			Campaign announcements and new partners land on our socials first.
-		</p>
-		<div class="mt-8 flex flex-wrap justify-center gap-4">
-			{#each socials as social (social.label)}
-				<a
-					href={social.href}
-					target="_blank"
-					rel="external noopener noreferrer"
-					class="rounded-full border border-night-900/15 bg-white/70 px-6 py-3 font-display text-sm font-semibold text-night-900 transition hover:border-gold-500 hover:text-gold-600 dark:border-cream-50/15 dark:bg-night-800/70 dark:text-cream-50 dark:hover:border-gold-400 dark:hover:text-gold-300"
-				>
-					{social.label}
-				</a>
-			{/each}
+{#if socials.length}
+	<section class="bg-cream-50 pb-20 dark:bg-night-950">
+		<div class="mx-auto max-w-6xl px-5 text-center sm:px-8">
+			<h2 class="font-display text-2xl font-bold text-night-900 dark:text-cream-50">
+				Follow the owl
+			</h2>
+			<p class="mt-2 text-ink-500 dark:text-night-300">
+				Campaign announcements and new partners land on our socials first.
+			</p>
+			<div class="mt-8 flex flex-wrap justify-center gap-4">
+				{#each socials as social (social.label)}
+					<a
+						href={social.href}
+						target="_blank"
+						rel="external noopener noreferrer"
+						class="rounded-full border border-night-900/15 bg-white/70 px-6 py-3 font-display text-sm font-semibold text-night-900 transition hover:border-gold-500 hover:text-gold-600 dark:border-cream-50/15 dark:bg-night-800/70 dark:text-cream-50 dark:hover:border-gold-400 dark:hover:text-gold-300"
+					>
+						{social.label}
+					</a>
+				{/each}
+			</div>
 		</div>
-	</div>
-</section>
+	</section>
+{/if}

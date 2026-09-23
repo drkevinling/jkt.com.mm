@@ -4,6 +4,9 @@
 	import OwlLogo from './OwlLogo.svelte';
 
 	const year = new Date().getFullYear();
+	const hasSocials = Boolean(
+		site.social.facebook || site.social.instagram || site.social.x || site.social.linkedin
+	);
 </script>
 
 <footer class="starfield bg-night-950 text-night-200">
@@ -14,8 +17,8 @@
 					<OwlLogo size={40} />
 				</a>
 				<p class="mt-5 max-w-sm text-sm leading-relaxed text-night-300">
-					The loyalty companion that never sleeps. Collect points, stamps and rewards every day at
-					your favourite shops across Myanmar.
+					{site.brand} by {site.legalName} — business software for Myanmar. The Owlvyra ERP suite runs
+					the back office; the Owl Reward app rewards the customers who keep it busy.
 				</p>
 				<div class="mt-6 space-y-1.5 text-sm not-italic">
 					<p class="font-display font-semibold text-cream-50">{site.legalName}</p>
@@ -59,53 +62,57 @@
 			</nav>
 
 			<div>
-				<h2 class="font-display text-sm font-semibold tracking-[0.18em] text-gold-300 uppercase">
-					Follow us
-				</h2>
-				<ul class="mt-4 space-y-2.5 text-sm">
-					{#if site.social.facebook}
-						<li>
-							<a
-								href={site.social.facebook}
-								target="_blank"
-								rel="external noopener noreferrer"
-								class="transition-colors hover:text-cream-50">Facebook</a
-							>
-						</li>
-					{/if}
-					{#if site.social.instagram}
-						<li>
-							<a
-								href={site.social.instagram}
-								target="_blank"
-								rel="external noopener noreferrer"
-								class="transition-colors hover:text-cream-50">Instagram</a
-							>
-						</li>
-					{/if}
-					{#if site.social.x}
-						<li>
-							<a
-								href={site.social.x}
-								target="_blank"
-								rel="external noopener noreferrer"
-								class="transition-colors hover:text-cream-50">X (Twitter)</a
-							>
-						</li>
-					{/if}
-					{#if site.social.linkedin}
-						<li>
-							<a
-								href={site.social.linkedin}
-								target="_blank"
-								rel="external noopener noreferrer"
-								class="transition-colors hover:text-cream-50">LinkedIn</a
-							>
-						</li>
-					{/if}
-				</ul>
+				{#if hasSocials}
+					<h2 class="font-display text-sm font-semibold tracking-[0.18em] text-gold-300 uppercase">
+						Follow us
+					</h2>
+					<ul class="mt-4 space-y-2.5 text-sm">
+						{#if site.social.facebook}
+							<li>
+								<a
+									href={site.social.facebook}
+									target="_blank"
+									rel="external noopener noreferrer"
+									class="transition-colors hover:text-cream-50">Facebook</a
+								>
+							</li>
+						{/if}
+						{#if site.social.instagram}
+							<li>
+								<a
+									href={site.social.instagram}
+									target="_blank"
+									rel="external noopener noreferrer"
+									class="transition-colors hover:text-cream-50">Instagram</a
+								>
+							</li>
+						{/if}
+						{#if site.social.x}
+							<li>
+								<a
+									href={site.social.x}
+									target="_blank"
+									rel="external noopener noreferrer"
+									class="transition-colors hover:text-cream-50">X (Twitter)</a
+								>
+							</li>
+						{/if}
+						{#if site.social.linkedin}
+							<li>
+								<a
+									href={site.social.linkedin}
+									target="_blank"
+									rel="external noopener noreferrer"
+									class="transition-colors hover:text-cream-50">LinkedIn</a
+								>
+							</li>
+						{/if}
+					</ul>
+				{/if}
 				<h2
-					class="mt-8 font-display text-sm font-semibold tracking-[0.18em] text-gold-300 uppercase"
+					class="font-display text-sm font-semibold tracking-[0.18em] text-gold-300 uppercase {hasSocials
+						? 'mt-8'
+						: ''}"
 				>
 					Get the app
 				</h2>

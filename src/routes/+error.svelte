@@ -1,10 +1,11 @@
 <script lang="ts">
 	import { resolve } from '$app/paths';
 	import OwlLogo from '$lib/components/OwlLogo.svelte';
+	import { site } from '$lib/config/site';
 </script>
 
 <svelte:head>
-	<title>Page not found — Owl Reward</title>
+	<title>Page not found — {site.brand}</title>
 	<meta name="robots" content="noindex" />
 </svelte:head>
 
