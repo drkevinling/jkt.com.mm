@@ -1,9 +1,10 @@
 <script lang="ts">
 	import LegalSection from '$lib/components/LegalSection.svelte';
 	import { addressLine, site } from '$lib/config/site';
+	import { resolve } from '$app/paths';
 
 	// Last-updated date shown on the terms; bump it whenever the terms change
-	const lastUpdated = '16 September 2026';
+	const lastUpdated = '27 September 2026';
 </script>
 
 <svelte:head>
@@ -156,8 +157,13 @@
 
 	<LegalSection id="termination" title="11. Termination">
 		<p>
-			You may stop using the Services and request account deletion at any time. We may suspend or
-			terminate accounts that violate these terms, the law, or the rights of others.
+			You may stop using the Services and request account deletion at any time by following the
+			<a
+				href={resolve('/data-deletion')}
+				class="text-gold-700 underline underline-offset-4 dark:text-gold-300"
+				>data deletion instructions</a
+			>. We may suspend or terminate accounts that violate these terms, the law, or the rights of
+			others.
 		</p>
 	</LegalSection>
 

@@ -4,7 +4,8 @@ Marketing site for **JKT Co.,Ltd** showcasing the **Owl Reward** loyalty app.
 Fully prerendered static site (SvelteKit + adapter-static), deployed to
 GitHub Pages from Actions on every push to `main`.
 
-Live at **https://jkt.com.mm**.
+Live at **https://jkt.com.mm** (also **https://owlvyra.com** — same GitHub Pages
+deploy, alternate domain on Cloudflare).
 
 ## Develop
 

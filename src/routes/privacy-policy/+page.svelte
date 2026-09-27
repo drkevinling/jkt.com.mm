@@ -1,9 +1,10 @@
 <script lang="ts">
 	import LegalSection from '$lib/components/LegalSection.svelte';
 	import { addressLine, site } from '$lib/config/site';
+	import { resolve } from '$app/paths';
 
 	// Last-updated date shown on the policy; bump it whenever the policy changes
-	const lastUpdated = '16 September 2026';
+	const lastUpdated = '27 September 2026';
 </script>
 
 <svelte:head>
@@ -193,8 +194,12 @@
 				<strong>Correct:</strong> you can fix inaccurate details in your profile or by contacting us.
 			</li>
 			<li>
-				<strong>Delete:</strong> you can request deletion of your account; we keep what we must for legal
-				or fraud-prevention reasons.
+				<strong>Delete:</strong> you can request deletion of your account by following the
+				<a
+					href={resolve('/data-deletion')}
+					class="text-gold-700 underline underline-offset-4 dark:text-gold-300"
+					>data deletion instructions</a
+				>. We keep what we must for legal or fraud-prevention reasons.
 			</li>
 			<li>
 				<strong>Withdraw consent:</strong> you can withdraw consent for location or marketing at any time

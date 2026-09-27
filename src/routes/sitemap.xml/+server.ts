@@ -9,7 +9,8 @@ const routes = [
 	'/about',
 	'/contact',
 	'/privacy-policy',
-	'/terms'
+	'/terms',
+	'/data-deletion'
 ] as const;
 
 export async function GET() {

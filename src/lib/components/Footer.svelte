@@ -67,6 +67,11 @@
 							Terms &amp; Conditions
 						</a>
 					</li>
+					<li>
+						<a href={resolve('/data-deletion')} class="transition-colors hover:text-cream-50">
+							Delete your data
+						</a>
+					</li>
 				</ul>
 			</nav>
 
@@ -169,6 +174,10 @@
 				>
 				<span class="mx-2" aria-hidden="true">·</span>
 				<a href={resolve('/terms')} class="transition-colors hover:text-cream-50">Terms</a>
+				<span class="mx-2" aria-hidden="true">·</span>
+				<a href={resolve('/data-deletion')} class="transition-colors hover:text-cream-50"
+					>Delete your data</a
+				>
 			</p>
 		</div>
 	</div>

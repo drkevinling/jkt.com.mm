@@ -11,7 +11,8 @@ export const site = {
 	/** Canonical production origin (no trailing slash). */
 	// Custom domain served by GitHub Pages — remember to configure the domain
 	// in repo Settings → Pages (and DNS) when changing this value; canonical/OG
-	// tags, sitemap and robots all derive from it
+	// tags, sitemap and robots all derive from it.
+	// owlvyra.com also serves this site (Cloudflare Worker → same GitHub Pages deploy).
 	url: 'https://jkt.com.mm',
 
 	/** Registered legal entity name — must match company registration exactly. */

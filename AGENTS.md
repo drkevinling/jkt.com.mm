@@ -45,7 +45,7 @@ src/
     /erp                  # Owlvyra ERP suite (modules, depths, packages)
     /owl-reward           # Owl Reward app showcase + store badges
     /about /contact       # company info
-    /privacy-policy /terms# legal pages (policy covers website, ERP webapps AND the app)
+    /privacy-policy /terms /data-deletion # legal pages (policy covers website, ERP webapps AND the app)
     sitemap.xml/+server.ts
 static/
     robots.txt favicon.svg favicon.ico og-image.png
@@ -72,8 +72,11 @@ static/
 - Public address: `https://jkt.com.mm/` — custom domain on GitHub Pages
   (configured in repo Settings → Pages + DNS pointing at GitHub Pages). The
   site builds with root base path (no `BASE_PATH`); `site.url` in
-  `src/lib/config/site.ts` is the canonical origin. Until the custom domain
-  is attached in repo settings, the `github.io` URL will not resolve assets.
+  `src/lib/config/site.ts` is the canonical origin. **`https://owlvyra.com/`**
+  (and `www`) serve the same deployment via Cloudflare (DNS + Worker proxy to
+  `jkt.com.mm`); leave GitHub Pages custom domain as `jkt.com.mm`. Until the
+  custom domain is attached in repo settings, the `github.io` URL will not
+  resolve assets.
 - To revert to the `github.io` project URL: re-add
   `BASE_PATH: /${{ github.event.repository.name }}` to the Build step in
   `.github/workflows/ci.yml` and update `site.url`.
